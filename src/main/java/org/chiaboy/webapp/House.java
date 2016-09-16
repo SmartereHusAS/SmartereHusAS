@@ -9,7 +9,7 @@ import java.util.HashMap;
  * Created by Evdal on 16.09.2016.
  */
 @Path("/room")
-class House{
+public class House{
     private static HashMap<String,Room> rooms = new HashMap<String,Room>();
 
     @GET

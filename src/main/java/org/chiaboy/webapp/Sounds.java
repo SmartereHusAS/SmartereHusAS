@@ -4,6 +4,7 @@ import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 import java.util.Collection;
 import java.util.HashMap;
+import java.util.InputMismatchException;
 
 
 /**
@@ -33,6 +34,15 @@ public class Sounds {
     @Produces(MediaType.APPLICATION_JSON)
     public Alarms getAlarms(){
         return alarms;
+    }
+
+    public void setVolume(int volume){
+        if(volume < 0 || volume > 100){
+            throw new InputMismatchException();
+        }
+        else{
+            this.volume = volume;
+        }
     }
 
 }

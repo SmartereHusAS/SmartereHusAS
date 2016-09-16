@@ -7,7 +7,7 @@ import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 
 @Path("/room")
-class Room{
+public class Room{
     private Sounds sounds;
     private Lights lights;
     private Temperatures temps;
