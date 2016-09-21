@@ -34,7 +34,23 @@ public class Sounds {
     public Alarms getAlarms(){
         return alarms;
     }
+    @POST
+    @Consumes(MediaType.APPLICATION_JSON)
+    public void addSound(String soundDeviceId, SoundDevice sd){
+        soundDevices.put(soundDeviceId, sd);
+    }
+    public boolean editVolume(String soundDeviceId, SoundDevice newVolume){
+        return soundDevices.containsKey(soundDeviceId) && soundDevices.replace(soundDeviceId, soundDevices.get(soundDeviceId), newVolume);
+    }
+    @GET
+    @Produces(MediaType.APPLICATION_JSON)
+    public Collection<SoundDevice> getSoundDevices(){
+        return soundDevices.values();
+    }
 
+    public void removeSoundDevice(String soundDeviceId){
+        soundDevices.remove(soundDeviceId);
+    }
 }
 
 
