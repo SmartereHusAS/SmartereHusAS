@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Room</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $(".glyphicon").click(function(){
+                var icons = $(".glyphicon");
+                for(var i = 0; i<icons.length;i++){
+                    if(icons[i] == this){
+                        var left = false;
+                        if(i % 2 == 0){
+                             left = true
+                        }
+                        switch (i){
+                            case 0:
+                                $("#progress-light-1").css("width", "-=20");
+                                break;
+                            case 1:
+                                $("#progress-light-1").css("width", "+=20");
+                                break;
+                            case 2:
+                                $("#progress-light-2").css("width", "-=20");
+                                break;
+                            case 3:
+                                $("#progress-light-2").css("width", "+=20");
+                                break;
+                            case 4:
+                                $("#progress-light-3").css("width", "-=20");
+                                break;
+                            case 5:
+                                $("#progress-light-3").css("width", "+=20");
+                                break;
+                        }
+                        break;
+                    }
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+<div class="jumbotron text-center">
+    <h1>Smartere Hus AS</h1>
+    <p>Her kan du administrere ditt smarthus!</p>
+</div>
+<div class="container">
+    <!-- Single button -->
+    <div class="col-sm-4">
+        <div class="list-group">
+            <div class="list-group-item"><h3>Lights</h3></div>
+            <div class="panel panel-default">
+                <!-- Default panel contents -->
+                <div class="panel-heading">Click on the arrows to adjust light</div>
+                <div class="panel-body">
+                    <span type="button" class="glyphicon glyphicon-triangle-left"></span>
+                    <span type="button" class="glyphicon glyphicon-triangle-right"></span>
+                    <div class="progress">
+                        <div id="progress-light-1" class="progress-bar progress-bar-warning progress-bar-striped" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%">
+                            Light 1
+                        </div>
+                    </div>
+                    <span type="button" class="glyphicon glyphicon-triangle-left"></span>
+                    <span type="button" class="glyphicon glyphicon-triangle-right"></span>
+                    <div class="progress">
+                        <div id="progress-light-2" class="progress-bar progress-bar-warning progress-bar-striped" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%">
+                            Light 2
+                        </div>
+                    </div>
+                    <span type="button" class="glyphicon glyphicon-triangle-left"></span>
+                    <span type="button" class="glyphicon glyphicon-triangle-right"></span>
+                    <div class="progress">
+                        <div id="progress-light-3" class="progress-bar progress-bar-warning progress-bar-striped" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%">
+                            Light 3
+                        </div>
+                    </div>
+
+                </div>
+                <button type="button" class="btn btn-primary">Update room</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-sm-4">
+        <div class="list-group">
+            <div class="list-group-item"><h3>Sounds</h3></div>
+            <div class="panel panel-default">
+                <!-- Default panel contents -->
+                <div class="panel-heading">Click on the bars to adjust sounds</div>
+                <div class="panel-body">
+                    <div class="progress">
+                        <div class="progress-bar progress-bar-success progress-bar-striped" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%">
+                            SoundUnit 1
+                        </div>
+                    </div>
+                    <div class="progress">
+                        <div class="progress-bar progress-bar-success progress-bar-striped" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%">
+                            SoundUnit 2
+                        </div>
+                    </div>
+                    <div class="progress">
+                        <div class="progress-bar progress-bar-success progress-bar-striped" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%">
+                            SoundUnit 3
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-sm-4">
+        <div class="list-group">
+            <div class="list-group-item"><h3>Temperatures</h3></div>
+            <div class="panel panel-default">
+                <!-- Default panel contents -->
+                <div class="panel-heading">Click on the bars to adjust temperature</div>
+                <div class="panel-body">
+                    <div class="progress">
+                        <div class="progress-bar progress-bar-danger progress-bar-striped" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%">
+                            Heatelement 1
+                        </div>
+                    </div>
+                    <div class="progress">
+                        <div class="progress-bar progress-bar-danger progress-bar-striped" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%">
+                            Heatelement 2
+                        </div>
+                    </div>
+                    <div class="progress">
+                        <div class="progress-bar progress-bar-danger progress-bar-striped" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%">
+                            Heatelement 3
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+</div>
+
+</body>
+</html>

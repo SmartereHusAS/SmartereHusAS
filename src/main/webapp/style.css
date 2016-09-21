@@ -1,0 +1,24 @@
+.progress{
+    cursor: default;
+}
+.glyphicon{
+    margin: 3px 5px;
+    cursor: pointer;
+}
+.glyphicon-triangle-left{
+    float: left;
+}
+.glyphicon-triangle-right{
+    float: right;
+}
+.btn-primary{
+    margin-bottom: 20px;
+    margin-left: 20%;
+    padding-left: 40px;
+    padding-right: 40px;
+
+}
+.progress-bar{
+    max-width: 100%;
+
+}
