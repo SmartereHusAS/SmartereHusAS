@@ -16,6 +16,9 @@ public class Alarm {
         alarmTime = new DateTime(year,monthOfYear,dayOfMonth,hourOfDay,minuteOfHour,0);
         this.room = room;
     }
+
+    public Alarm() {}
+
     public void setVolume(int volume){
         if(volume > 100 || volume < 0){
             throw new InputMismatchException("Volume must be between 0 and 100");
@@ -37,11 +40,12 @@ public class Alarm {
     public void addAlarmTime(int minutes){
         alarmTime.plusMinutes(minutes);
     }
+    /*
     public void goOff(){
         room.getSounds().setVolume(80);
     }
     public void shutDown(){
         room.getSounds().setVolume(0);
     }
-
+    */
 }

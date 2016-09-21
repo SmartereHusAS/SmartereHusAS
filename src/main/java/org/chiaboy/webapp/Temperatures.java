@@ -8,47 +8,46 @@ import java.util.*;
 /**
  * Created by asdfLaptop on 16.09.2016.
  */
-@Path("/temperatures/")
+@Path("/")
 public class Temperatures {
-    private HashMap<String, Temperature> temps = new HashMap<String, Temperature>() {{
-        put("1", new Temperature(20.0, 17.0)); //Test-value
+    private static Map<String, Temperature> temps = new HashMap<String, Temperature>() {{
+        put("1", new Temperature("1", 20.0, 17.0)); //Test-value
     }};
 
-    //Maybe
-    private final int FLOOR = 0;
-    private final int AMBIENT = 1;
-
-    @POST
-    @Consumes(MediaType.APPLICATION_JSON)
-    public void addTemp(String tempId, Temperature t) {
-        temps.put(tempId, t);
-    }
-
-    /*
-    public void addTemp(String tempId, double floor, double ambient) {
-        temps.put(tempId, new Temperature(floor, ambient));
-    }
-    */
-
-    public boolean editTemp(String tempId, Temperature newTemp) {
-        return temps.containsKey(tempId) && temps.replace(tempId, temps.get(tempId), newTemp);
-    }
-
     @GET
-    @Path("/{tempId}")
-    @Produces(MediaType.APPLICATION_JSON)
-    public Temperature getTemp(@PathParam("tempId") String tempId) {
-        return temps.get(tempId);
-    }
-
-    @GET
+    @Path("rooms/{id}/temps")
     @Produces(MediaType.APPLICATION_JSON)
     public Collection<Temperature> getTemps() {
         return temps.values();
     }
 
-    public void removeTemp(String tempId) {
+    @GET
+    @Path("rooms/{id}/temps/{tempId}")
+    @Produces(MediaType.APPLICATION_JSON)
+    public Temperature getTemp(@PathParam("tempId") String tempId) {
+        if(!temps.containsKey(tempId)) {
+            throw new NotFoundException();
+        }
+        return temps.get(tempId);
+    }
+
+    @POST
+    @Consumes(MediaType.APPLICATION_JSON)
+    public void addTemp(Temperature t) {
+        temps.put(t.getId(), t);
+    }
+
+    @DELETE
+    @Path("/{tempId}")
+    @Consumes(MediaType.APPLICATION_JSON)
+    public void removeTemp(@PathParam("tempId") String tempId) {
         temps.remove(tempId);
     }
+
+    /*
+    public boolean editTemp(String tempId, Temperature newTemp) {
+        return temps.containsKey(tempId) && temps.replace(tempId, temps.get(tempId), newTemp);
+    }
+    */
 
 }

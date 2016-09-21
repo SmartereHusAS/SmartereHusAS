@@ -4,38 +4,48 @@ import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 import java.util.Collection;
 import java.util.HashMap;
+import java.util.Map;
+
 /**
  * Created by KristofferLaptop on 16-Sep-16.
  */
 @Path("/lights")
 public class Lights {
-    private static HashMap<String, Light> lights = new HashMap<String, Light>();
+    private static Map<String, Light> lights = new HashMap<String, Light>();
 
-    public void addLight(String ligthId, Light light){
-        lights.put(ligthId, light);
-    }
-    public void addLight(String ligthId, boolean state, int watt){
-        Light ligth = new Light(state, watt);
-        lights.put(ligthId, ligth);
-    }
-    public boolean editLigth(String ligthID, Light newLight){
-        return lights.containsKey(ligthID) && lights.replace(ligthID, lights.get(ligthID), newLight);
+    @GET
+    @Produces(MediaType.APPLICATION_JSON)
+    public Collection<Light> getTemps() {
+        return lights.values();
     }
 
     @GET
     @Path("/{lightId}")
     @Produces(MediaType.APPLICATION_JSON)
-    public Light getLigth(@PathParam("lightId") String ligthId){
-        return lights.get(ligthId);
+    public Light getTemp(@PathParam("lightId") String lightId) {
+        if(!lights.containsKey(lightId)) {
+            throw new NotFoundException();
+        }
+        return lights.get(lightId);
     }
 
-    @GET
-    @Produces(MediaType.APPLICATION_JSON)
-    public Collection<Light> getLights(){
-        return lights.values();
+    @POST
+    @Consumes(MediaType.APPLICATION_JSON)
+    public void addLight(Light l) {
+        lights.put(l.getId(), l);
     }
-    public void removeLight(String lightId){
+
+    @DELETE
+    @Path("/{lightId}")
+    @Consumes(MediaType.APPLICATION_JSON)
+    public void removeTemp(@PathParam("lightId") String lightId) {
         lights.remove(lightId);
     }
+
+    /*
+    public boolean editLigth(String ligthID, Light newLight){
+        return lights.containsKey(ligthID) && lights.replace(ligthID, lights.get(ligthID), newLight);
+    }
+     */
 
 }

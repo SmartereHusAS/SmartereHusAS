@@ -16,6 +16,7 @@ public class Alarms extends Thread {
     private static int alarmVolume;
     private static Date time;
     private static boolean isOn;
+
     private static HashMap<String,Alarm> alarms = new HashMap<String,Alarm>();
 
 
@@ -26,12 +27,12 @@ public class Alarms extends Thread {
             for (Map.Entry<String, Alarm> entry : alarms.entrySet()) { //blar gjennom alarmer
                 Alarm alarm = entry.getValue();
                 if (alarm.isOn() && alarm.getAlarmTime().getMillis() < new DateTime().getMillis()) { //sjekker om alarm skal gå av
-                    alarm.goOff();
+                    //alarm.goOff();
                     try {
                         this.wait(1000 * 60);
                         alarm.addAlarmTime(5); //
                     } catch (InterruptedException ie) {
-                        alarm.shutDown();
+                        //alarm.shutDown();
                         alarm.setIsOn(false);
                     }
 

@@ -6,10 +6,18 @@ package org.chiaboy.webapp;
 public class Temperature {
     private double floorTemp;
     private double ambientTemp;
+    private String id;
 
-    public Temperature(double floorTemp, double ambientTemp) {
+    public Temperature(String id, double floorTemp, double ambientTemp) {
+        this.id = id;
         this.floorTemp = floorTemp;
         this.ambientTemp = ambientTemp;
+    }
+
+    public Temperature() {}
+
+    public String getId() {
+        return id;
     }
 
     public double getFloorTemp() {

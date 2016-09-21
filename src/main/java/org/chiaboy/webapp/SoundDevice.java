@@ -3,7 +3,14 @@ package org.chiaboy.webapp; /**
  */
 public class SoundDevice {
     private String soundDeviceId;
-    private int volume = 0;
+    private int volume;
+
+    public SoundDevice(String soundDeviceId, int volume) {
+        this.soundDeviceId = soundDeviceId;
+        this.volume = volume;
+    }
+
+    public SoundDevice() {}
 
     public void setVolume(int volume){
         this.volume = volume;
