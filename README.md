@@ -57,4 +57,53 @@ Lag en brukertest for det redesignede systemet deres. Dere bør gjennomføre tes
 
 (Disse endringene trenger dere ikke å implementere, men ta vare på dem til neste øving da vi skal jobbe videre med GUIet.)
 
+Info for oppgave a) fra leksjonen:
+
+Brukeropplevelsen
+
+Brukeropplevelsen, eller UX som det noen ganger forkortes til (fra engelsk: 
+user experience), flytter fokuset fra ren brukskvalitet og over til hvilke følelser det å bruke et system gir oss. En av de 
+første til å ta dette på alvor var Donald Norman, som i 1988 ga ut en bok kalt The Psychology of Everyday Things (og som anbefales varmt som tilleggslitteratur for de som er interessert, den er både underholdende og lettlest). Her peker han på at teknologi først og fremst er der for å støtte oss i det vi gjør, og ikke for sin egen del. Det betyr at at teknologi som er laget slik at vi sitter igjen 
+med negative følelser (som for eksempel frustrasjon, utålmodighet, forvirring eller en følelse av å 
+være dum) i mange tilfeller kan sies å ha et dårlig design. Det betyr at problemet ikke 
+nødvendigvis ligger i at det er vi som ikke er “gode nok” brukere, som mange, mer eller mindre 
+bevisst, tenker når de ikke lykkes med å bruke teknologi.
+
+I dag er avansert datateknologi er en del av hverdagen vår på stadig flere måter, spesielt i form av 
+mobil teknologi og innebygd datateknologi i stadig flere hverdagsgjenstander. Det betyr at ikke 
+bare brukervennlighet, men også brukeropplevelsen blir viktigere og viktigere. Dette ser vi for 
+eksempel på Apples suksess, som i hvert fall delvis skyldes at de tar nettopp brukeropplevelsen 
+og brukskvalitet mye mer på alvor enn mange andre teknologifirmaer. Lenge var datateknologi 
+forbeholdt eksperter og entusiastiske hobbybrukere, og da var det få som stilte spørsmål ved 
+forestillingen om at vi skulle tilpasse oss teknologien og ikke omvendt. I dag, når datateknologien 
+invaderer hverdagen (inkludert vårt sosiale liv) på stadig nye måter, må vi ha et bredere perspektiv 
+for å lykkes med ny teknologi.
+
+Så, hva er egentlig brukeropplevelsen? Som du skjønner kan man tenke på brukeropplevelsen 
+som en utvidelse av brukskvalitetsbegrepet, det inkluderer brukskvalitet, men går utover dette og 
+tar med følelser og holdninger som brukeren har til et system. Det betyr at brukeropplevelsen i stor 
+grad en subjektiv opplevelse som finnes i hodet til den enkelte brukeren, og som vi kun kan 
+undersøke ved å spørre brukere. Det er finnes ennå ingen større enighet om en felles definisjon 
+av begrepet brukeropplevelse, men vi når vi undersøker brukeropplevelsen av et system vil vi 
+typisk være interessert i ting som
+
+
+✓ Totalinntrykk.
+ Liker brukeren systemet og vil anbefale det til andre? Hvordan er de 
+sammenlignet med andre lignende systemer?
+
+
+✓ Brukskvalitet.
+ Er systemet effektivt å bruke, oppfører det seg som forventet, og kan man 
+bruke det uten altfor mye frustrasjoner?
+
+✓ Følelser.
+ Hvordan føler brukeren seg etter å ha brukt produktet ei stund? Glad, motivert, 
+underholdt, avslappet, stresset eller irritert? Hvorfor?
+
+✓ Estetikk.
+ Opplever brukeren systemet som estetisk tiltrekkende?
+Hvilke mål som er viktigst vil nødvendigvis henge sammen med hva som er målet med systemet 
+og hvordan brukere samhandler med det.
+
  
