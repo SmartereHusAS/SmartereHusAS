@@ -18,12 +18,14 @@ public class Light {
 
     public Light() {}
 
-    public void setId(String newId){
-        id = newId;
+    public void setId(String id){
+        this.id = id;
     }
+
     public String getId(){
         return id;
     }
+
     public void setState(boolean state){
         on = state;
     }

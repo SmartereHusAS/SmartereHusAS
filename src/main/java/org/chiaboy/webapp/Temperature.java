@@ -4,9 +4,9 @@ package org.chiaboy.webapp;
  * Created by asdfLaptop on 16.09.2016.
  */
 public class Temperature {
+    private String id;
     private double floorTemp;
     private double ambientTemp;
-    private String id;
 
     public Temperature(String id, double floorTemp, double ambientTemp) {
         this.id = id;
@@ -18,6 +18,10 @@ public class Temperature {
 
     public String getId() {
         return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
     }
 
     public double getFloorTemp() {

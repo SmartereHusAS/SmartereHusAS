@@ -9,18 +9,23 @@ import java.util.Map;
 /**
  * Created by KristofferLaptop on 16-Sep-16.
  */
-@Path("/lights")
+@Path("/rooms/{roomId}")
 public class Lights {
-    private static Map<String, Light> lights = new HashMap<String, Light>();
+    private static Map<String, Light> lights = new HashMap<String, Light>() {{
+        put("1", new Light("1", true, 111)); //Test-value
+        put("2", new Light("2", true, 222)); //Test-value
+        put("3", new Light("3", true, 333)); //Test-value
+    }};
 
     @GET
+    @Path("/lights")
     @Produces(MediaType.APPLICATION_JSON)
     public Collection<Light> getTemps() {
         return lights.values();
     }
 
     @GET
-    @Path("/{lightId}")
+    @Path("/lights/{lightId}")
     @Produces(MediaType.APPLICATION_JSON)
     public Light getTemp(@PathParam("lightId") String lightId) {
         if(!lights.containsKey(lightId)) {
@@ -30,13 +35,14 @@ public class Lights {
     }
 
     @POST
+    @Path("/lights")
     @Consumes(MediaType.APPLICATION_JSON)
     public void addLight(Light l) {
         lights.put(l.getId(), l);
     }
 
     @DELETE
-    @Path("/{lightId}")
+    @Path("/lights/{lightId}")
     @Consumes(MediaType.APPLICATION_JSON)
     public void removeTemp(@PathParam("lightId") String lightId) {
         lights.remove(lightId);

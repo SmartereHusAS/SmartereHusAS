@@ -3,13 +3,13 @@ package org.chiaboy.webapp;
 /**
  * Created by asdfLaptop on 21.09.2016.
  */
-public class Kunde {
+public class TestObj {
     private String id;
     private String name;
 
-    public Kunde() {}
+    public TestObj() {}
 
-    public Kunde(String id, String name) {
+    public TestObj(String id, String name) {
         this.id = id;
         this.name = name;
     }

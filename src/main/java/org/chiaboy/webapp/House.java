@@ -14,15 +14,9 @@ import java.util.Map;
 public class House{
     private static Map<String, Room> rooms = new HashMap<String, Room>() {{
         put("1", new Room("1", "Living room", new Sounds(), new Lights(), new Temperatures())); //Test-value
-        //put("1", new Room()); //Test-value
-    }};
+        put("2", new Room("2", "Dining room", new Sounds(), new Lights(), new Temperatures())); //Test-value
 
-    //Testing
-    private static Map<String,Kunde> kunder = new HashMap<String,Kunde>() {{
-        put("1", new Kunde("1", "Julenissen"));
     }};
-
-    public House() {}
 
     @GET
     @Path("/rooms")
@@ -31,16 +25,9 @@ public class House{
         return rooms.values();
     }
 
-    //Testing
-    @GET
-    @Path("/kunder")
-    @Produces(MediaType.APPLICATION_JSON)
-    public Collection<Kunde> getKunder() {
-        return kunder.values();
-    }
 
     @GET
-    @Path("rooms/{roomId}")
+    @Path("/rooms/{roomId}")
     @Produces(MediaType.APPLICATION_JSON)
     public Room getRoom(@PathParam("roomId") String roomId){
         if(!rooms.containsKey(roomId)) {
@@ -52,8 +39,7 @@ public class House{
     @POST
     @Path("/rooms")
     @Consumes(MediaType.APPLICATION_JSON)
-    public void addRoom(Room room){
-        rooms.put(room.getId(),room);
+    public void addRoom(Room r){
+        rooms.put(r.getId(), r);
     }
-
 }
