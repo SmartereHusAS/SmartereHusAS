@@ -21,12 +21,16 @@
 }
 
 
-.btn-primary{
+.btn-default{
     margin-bottom: 5px;
     margin-top: 5px;
     margin-left: 0%;
     padding-left: 10px;
     padding-right: 10px;
+}
+.separator{
+    height: 30px;
+    width: 100%;
 }
 
 

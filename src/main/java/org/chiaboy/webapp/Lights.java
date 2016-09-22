@@ -12,9 +12,9 @@ import java.util.Map;
 @Path("/rooms/{roomId}")
 public class Lights {
     private static Map<String, Light> lights = new HashMap<String, Light>() {{
-        put("1", new Light("1", true, 111)); //Test-value
-        put("2", new Light("2", true, 222)); //Test-value
-        put("3", new Light("3", true, 333)); //Test-value
+        put("1", new Light("1", true, "90")); //Test-value
+        put("2", new Light("2", true, "50")); //Test-value
+        put("3", new Light("3", true, "30")); //Test-value
     }};
 
     @GET

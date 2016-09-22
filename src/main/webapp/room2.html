@@ -25,7 +25,7 @@
         <!-- Include all compiled plugins (below), or include individual files as needed -->
         <link rel="stylesheet" href="css/style.css">
         <link rel="stylesheet" href="css/room_style.css">
-        <script src="js/room_script.js"></script>
+        <script src="js/room2_script.js"></script>
 
     </head>
 
@@ -34,6 +34,8 @@
             <h1>Smartere Hus AS</h1>
             <p>Her kan du administrere ditt smarthus!</p>
         </div>
+        <a href="/"><button class="btn btn-primary">Back to house</button></a>
+
         <div class="container">
             <!-- Single button -->
             <div class="col-sm-4">
@@ -69,11 +71,22 @@
                                     Light 3
                                 </div>
                             </div>
+                            <div class="separator"></div>
                             <div class="panel-bottom">
-                                <input id="lightId" type="text">
-                                <button id="addLight" type="button" class="btn btn-primary">Add light</button>
-                                <button id="removeLight" type="button" class="btn btn-primary">Remove light</button>
-                                <br>
+                                <div class="form-group">
+                                    <label for="sel1">Remove light:</label>
+                                    <select class="form-control" id="sel1">
+                                        <option>1</option>
+                                        <option>2</option>
+                                        <option>3</option>
+                                        <option>4</option>
+                                    </select>
+                                    <button id="removeLight" class="btn btn-default remove-btn">Remove light</button>
+                                    <div class="separator"></div>
+                                    <label for="addLightText">Add light:</label>
+                                    <input type="text" class="form-control" id="addLightText" placeholder="Light name">
+                                    <button id="addLight" class="btn btn-default">Add light</button>
+                                </div>
                             </div>
                         </div>
 
@@ -114,12 +127,20 @@
                                     SoundUnit 3
                                 </div>
                             </div>
+                            <div class="separator"></div>
                             <div class="panel-bottom">
-                                <input id="newId" value="input id" type="text">
-                                <input id="newVolume" value="input volume" type="text">
-                                <button id="addSoundDevice" type="button" class="btn btn-primary">Add sound device</button>
-                                <input id="deleteId" value="input id to delete" type="text">
-                                <button id="removeSoundDevice" type="button" class="btn btn-primary">Remove sound device</button>
+                                <label for="deleteId">Remove sound device:</label>
+                                <select class="form-control" id="deleteId">
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                </select>
+                                <button id="removeSoundDevice" class="btn btn-default remove-btn">Remove sound device</button>
+                                <div class="separator"></div>
+                                <label for="newId">Add sound device:</label>
+                                <input type="text" placeholder="Sound device name"class="form-control" id="newId">
+                                <button id="addSoundDevice" class="btn btn-default">Add sound device</button>
                             </div>
                         </div>
                     </div>
@@ -136,35 +157,46 @@
                     </div>
 
                     <div class="panel panel-default">
-                        <!-- Default panel contents -->
+                            <!-- Default panel contents -->
                         <div class="panel-heading">Click on the bars to adjust temperature</div>
-                        <div class="panel-body">
-                            <span type="button" class="glyphicon glyphicon-triangle-left"></span>
-                            <span type="button" class="glyphicon glyphicon-triangle-right"></span>
-                            <div class="progress">
-                                <div id="progress-temp-1" class="progress-bar progress-bar-danger progress-bar-striped" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%">
-                                    Heatelement 1
+                            <div class="panel-body">
+                                <span type="button" class="glyphicon glyphicon-triangle-left"></span>
+                                <span type="button" class="glyphicon glyphicon-triangle-right"></span>
+                                <div class="progress">
+                                    <div id="progress-temp-1" class="progress-bar progress-bar-danger progress-bar-striped" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%">
+                                        Heatelement 1
+                                    </div>
                                 </div>
-                            </div>
-                            <span type="button" class="glyphicon glyphicon-triangle-left"></span>
-                            <span type="button" class="glyphicon glyphicon-triangle-right"></span>
-                            <div class="progress">
-                                <div id="progress-temp-2" class="progress-bar progress-bar-danger progress-bar-striped" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%">
-                                    Heatelement 2
+                                <span type="button" class="glyphicon glyphicon-triangle-left"></span>
+                                <span type="button" class="glyphicon glyphicon-triangle-right"></span>
+                                <div class="progress">
+                                    <div id="progress-temp-2" class="progress-bar progress-bar-danger progress-bar-striped" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%">
+                                        Heatelement 2
+                                    </div>
                                 </div>
-                            </div>
-                            <span type="button" class="glyphicon glyphicon-triangle-left"></span>
-                            <span type="button" class="glyphicon glyphicon-triangle-right"></span>
-                            <div class="progress">
-                                <div id="progress-temp-3" class="progress-bar progress-bar-danger progress-bar-striped" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%">
-                                    Heatelement 3
+                                <span type="button" class="glyphicon glyphicon-triangle-left"></span>
+                                <span type="button" class="glyphicon glyphicon-triangle-right"></span>
+                                <div class="progress">
+                                    <div id="progress-temp-3" class="progress-bar progress-bar-danger progress-bar-striped" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%">
+                                        Heatelement 3
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="panel-bottom">
-                                <input id="tempId" type="text">
-                                <button id="addTemp" type="button" class="btn btn-primary">Add heat element</button>
-                                <button id="removeTemp" type="button" class="btn btn-primary">Remove heat element</button>
-                                <br>
+                                <div class="separator"></div>
+
+                                <div class="panel-bottom">
+
+                                    <label for="deleteTempId">Remove heat element:</label>
+                                    <select class="form-control" id="deleteTempId">
+                                        <option>1</option>
+                                        <option>2</option>
+                                        <option>3</option>
+                                    </select>
+                                    <button id="removeTempButton" class="btn btn-default remove-btn">Remove heat element</button>
+                                    <div class="separator"></div>
+                                    <label for="addTempText">Add heat element:</label>
+                                    <input placeholder="Heat element name"type="text" class="form-control" id="newTempButton">
+                                    <button id="addTempText" class="btn btn-default">Add heat element</button>
+                                </div>
                             </div>
                         </div>
                     </div>
