@@ -2,6 +2,80 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="afaef80c-638f-44b3-8b61-5cd3fade0956" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Case 7.docx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/artifaktid/WEB-INF/classes/org/chiaboy/webapp/Alarm.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/artifaktid/WEB-INF/classes/org/chiaboy/webapp/Alarms.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/artifaktid/WEB-INF/classes/org/chiaboy/webapp/House$1.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/artifaktid/WEB-INF/classes/org/chiaboy/webapp/House.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/artifaktid/WEB-INF/classes/org/chiaboy/webapp/Light.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/artifaktid/WEB-INF/classes/org/chiaboy/webapp/Lights$1.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/artifaktid/WEB-INF/classes/org/chiaboy/webapp/Lights.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/artifaktid/WEB-INF/classes/org/chiaboy/webapp/Room.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/artifaktid/WEB-INF/classes/org/chiaboy/webapp/SoundDevice.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/artifaktid/WEB-INF/classes/org/chiaboy/webapp/Sounds$1.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/artifaktid/WEB-INF/classes/org/chiaboy/webapp/Sounds.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/artifaktid/WEB-INF/classes/org/chiaboy/webapp/Temperature.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/artifaktid/WEB-INF/classes/org/chiaboy/webapp/Temperatures$1.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/artifaktid/WEB-INF/classes/org/chiaboy/webapp/Temperatures.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/artifaktid/WEB-INF/classes/org/chiaboy/webapp/TestObj.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/artifaktid/WEB-INF/classes/org/chiaboy/webapp/TestingService$1.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/artifaktid/WEB-INF/classes/org/chiaboy/webapp/TestingService.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/artifaktid/WEB-INF/lib/asm-all-repackaged-2.2.0-b14.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/artifaktid/WEB-INF/lib/cglib-2.2.0-b14.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/artifaktid/WEB-INF/lib/guava-14.0.1.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/artifaktid/WEB-INF/lib/hk2-api-2.2.0-b14.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/artifaktid/WEB-INF/lib/hk2-locator-2.2.0-b14.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/artifaktid/WEB-INF/lib/hk2-utils-2.2.0-b14.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/artifaktid/WEB-INF/lib/javax.annotation-api-1.2.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/artifaktid/WEB-INF/lib/javax.inject-2.2.0-b14.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/artifaktid/WEB-INF/lib/javax.ws.rs-api-2.0.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/artifaktid/WEB-INF/lib/jersey-client-2.3.1.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/artifaktid/WEB-INF/lib/jersey-common-2.3.1.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/artifaktid/WEB-INF/lib/jersey-container-servlet-core-2.3.1.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/artifaktid/WEB-INF/lib/jersey-entity-filtering-2.3.1.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/artifaktid/WEB-INF/lib/jersey-media-moxy-2.3.1.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/artifaktid/WEB-INF/lib/jersey-server-2.3.1.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/artifaktid/WEB-INF/lib/joda-time-2.9.4.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/artifaktid/WEB-INF/lib/org.eclipse.persistence.antlr-2.5.0.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/artifaktid/WEB-INF/lib/org.eclipse.persistence.asm-2.5.0.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/artifaktid/WEB-INF/lib/org.eclipse.persistence.core-2.5.0.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/artifaktid/WEB-INF/lib/org.eclipse.persistence.moxy-2.5.0.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/artifaktid/WEB-INF/lib/osgi-resource-locator-1.0.1.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/artifaktid/WEB-INF/lib/validation-api-1.1.0.Final.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/org/chiaboy/webapp/Alarm.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/org/chiaboy/webapp/Alarms.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/org/chiaboy/webapp/House$1.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/org/chiaboy/webapp/House.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/org/chiaboy/webapp/Light.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/org/chiaboy/webapp/Lights$1.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/org/chiaboy/webapp/Lights.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/org/chiaboy/webapp/Room.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/org/chiaboy/webapp/SoundDevice.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/org/chiaboy/webapp/Sounds$1.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/org/chiaboy/webapp/Sounds.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/org/chiaboy/webapp/Temperature.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/org/chiaboy/webapp/Temperatures$1.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/org/chiaboy/webapp/Temperatures.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/org/chiaboy/webapp/TestObj.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/org/chiaboy/webapp/TestingService$1.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/org/chiaboy/webapp/TestingService.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/~$Case 7.docx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/artifaktid/META-INF/MANIFEST.MF" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/artifaktid/WEB-INF/glassfish-web.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/artifaktid/WEB-INF/web.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/artifaktid/css/room_style.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/artifaktid/css/style.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/artifaktid/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/artifaktid/js/index_script.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/artifaktid/js/room1_script.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/artifaktid/js/room2_script.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/artifaktid/js/room3_script.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/artifaktid/js/test_script.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/artifaktid/room1.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/artifaktid/room2.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/artifaktid/room3.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/artifaktid/testing.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/chiaboy/webapp/SoundDevice.java" afterPath="$PROJECT_DIR$/src/main/java/org/chiaboy/webapp/SoundDevice.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/chiaboy/webapp/Sounds.java" afterPath="$PROJECT_DIR$/src/main/java/org/chiaboy/webapp/Sounds.java" />
     </list>
@@ -26,29 +100,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="SoundDevice.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/org/chiaboy/webapp/SoundDevice.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-              <folding>
-                <element signature="e#290#291#0" expanded="true" />
-                <element signature="e#315#316#0" expanded="true" />
-                <element signature="e#351#352#0" expanded="true" />
-                <element signature="e#379#380#0" expanded="true" />
-                <element signature="e#412#413#0" expanded="true" />
-                <element signature="e#441#442#0" expanded="true" />
-                <element signature="e#484#485#0" expanded="true" />
-                <element signature="e#520#521#0" expanded="true" />
-                <element signature="e#545#546#0" expanded="true" />
-                <element signature="e#573#574#0" expanded="true" />
-                <element signature="e#604#605#0" expanded="true" />
-                <element signature="e#646#647#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="index_script.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/js/index_script.js">
           <provider selected="true" editor-type-id="text-editor">
@@ -61,25 +112,12 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="room1.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="room1.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/room1.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-11.354838">
+            <state vertical-scroll-proportion="0.6604127">
               <caret line="27" column="29" selection-start-line="27" selection-start-column="29" selection-end-line="27" selection-end-column="29" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Sounds.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/org/chiaboy/webapp/Sounds.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="1.1560284">
-              <caret line="63" column="0" selection-start-line="63" selection-start-column="0" selection-end-line="68" selection-end-column="5" />
-              <folding>
-                <element signature="e#2405#2406#0" expanded="true" />
-                <element signature="e#2456#2457#0" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -900,7 +938,7 @@
       <workItem from="1474537019528" duration="607000" />
       <workItem from="1474547856367" duration="340000" />
       <workItem from="1474549311139" duration="1644000" />
-      <workItem from="1474570133264" duration="5250000" />
+      <workItem from="1474570133264" duration="5432000" />
     </task>
     <task id="LOCAL-00001" summary="Lagt til funksjonalitet mellom database og html">
       <created>1474574369494</created>
@@ -912,7 +950,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="11865000" />
+    <option name="totallyTimeSpent" value="12047000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
@@ -1214,14 +1252,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/room1.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-11.354838">
-          <caret line="27" column="29" selection-start-line="27" selection-start-column="29" selection-end-line="27" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/room3.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-9.935484">
@@ -1313,6 +1343,14 @@
             <element signature="e#2405#2406#0" expanded="true" />
             <element signature="e#2456#2457#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/room1.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6604127">
+          <caret line="27" column="29" selection-start-line="27" selection-start-column="29" selection-end-line="27" selection-end-column="29" />
+          <folding />
         </state>
       </provider>
     </entry>
