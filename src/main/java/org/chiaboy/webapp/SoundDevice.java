@@ -13,8 +13,6 @@ public class SoundDevice {
         this.volume = volume;
     }
 
-    public SoundDevice() {}
-
     public String getId() {
         return id;
     }
@@ -30,5 +28,15 @@ public class SoundDevice {
     public void setVolume(String volume){
         this.volume = volume;
     }
+
+    public void mute(){
+        volume = "0";
+    }
+
+    public String toString(){
+        return "Volume: " + volume;
+    }
+
+
 
 }
