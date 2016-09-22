@@ -74,14 +74,13 @@ public class Sounds {
     public Alarms getAlarms(){
         return alarms;
     }
-
-    public void setVolume(int volume){
-        if(volume < 0 || volume > 100){
-            throw new InputMismatchException();
-        }
-        else{
-            this.volume = volume;
-        }
+    @POST
+    @Consumes(MediaType.APPLICATION_JSON)
+    public void addSound(String soundDeviceId, SoundDevice sd){
+        soundDevices.put(soundDeviceId, sd);
+    }
+    public boolean editVolume(String soundDeviceId, SoundDevice newVolume){
+        return soundDevices.containsKey(soundDeviceId) && soundDevices.replace(soundDeviceId, soundDevices.get(soundDeviceId), newVolume);
     }
 
 }
