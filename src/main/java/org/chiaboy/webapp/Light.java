@@ -6,36 +6,44 @@ import javax.ws.rs.*;
  * Created by KristofferLaptop on 16-Sep-16.
  */
 public class Light {
-    private int id;
+    private String id;
     private boolean on;
-    private int wattage;
+    private String value;
 
-    public Light(boolean on, int wattage){
+    public Light(String id, boolean on, String value){
         this.id = id;
         this.on = on;
-        this.wattage = wattage;
+        this.value = value;
     }
 
-    public void setId(int newId){
-        id = newId;
+    public Light() {}
+
+    public void setId(String id){
+        this.id = id;
     }
-    public int getId(){
+
+    public String getId(){
         return id;
     }
+
     public void setState(boolean state){
         on = state;
     }
+
     public boolean getState(){
         return on;
     }
-    public void setWattage(int watt){
-        wattage = watt;
+
+    public void setWattage(String value){
+        this.value = value;
     }
-    public int getWattage(){
-        return wattage;
+
+    public String getWattage(){
+        return value;
     }
+
     public String toString(){
-        return "ID: " + id + " State: " + on + " Wattage: " + wattage + "W";
+        return "ID: " + id + " State: " + on + " Value: " + value + "W";
     }
 
 }
