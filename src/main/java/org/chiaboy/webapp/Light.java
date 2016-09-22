@@ -8,12 +8,12 @@ import javax.ws.rs.*;
 public class Light {
     private String id;
     private boolean on;
-    private int wattage;
+    private String value;
 
-    public Light(String id, boolean on, int wattage){
+    public Light(String id, boolean on, String value){
         this.id = id;
         this.on = on;
-        this.wattage = wattage;
+        this.value = value;
     }
 
     public Light() {}
@@ -34,16 +34,16 @@ public class Light {
         return on;
     }
 
-    public void setWattage(int watt){
-        wattage = watt;
+    public void setWattage(String value){
+        this.value = value;
     }
 
-    public int getWattage(){
-        return wattage;
+    public String getWattage(){
+        return value;
     }
 
     public String toString(){
-        return "ID: " + id + " State: " + on + " Wattage: " + wattage + "W";
+        return "ID: " + id + " State: " + on + " Value: " + value + "W";
     }
 
 }

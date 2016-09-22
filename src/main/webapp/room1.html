@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+        <title>Room</title>
+
+        <!-- Bootstrap -->
+
+        <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <!-- Include all compiled plugins (below), or include individual files as needed -->
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/room_style.css">
+        <script src="js/room1_script.js"></script>
+
+    </head>
+
+    <body>
+        <div class="jumbotron text-center">
+            <h1>Smartere Hus AS</h1>
+            <p>Her kan du administrere ditt smarthus!</p>
+        </div>
+        <a href="/"><button class="btn btn-primary">Back to house</button></a>
+        <div class="container">
+            <!-- Single button -->
+            <div class="col-sm-4">
+                <div class="list-group">
+                    <div class="list-group-item"><h3>Lights</h3>
+                        <label class="switch">
+                            <input id="toggleLights" type="checkbox" checked>
+                            <div class="slider round"></div>
+                        </label>
+                    </div>
+                    <div class="panel panel-default">
+                        <!-- Default panel contents -->
+                        <div class="panel-heading">Click on the arrows to adjust light</div>
+                        <div class="panel-body">
+                            <span type="button" class="glyphicon glyphicon-triangle-left"></span>
+                            <span type="button" class="glyphicon glyphicon-triangle-right"></span>
+                            <div  class="progress">
+                                <div id="progress-light-1" class="progress-bar progress-bar-warning progress-bar-striped" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%">
+                                    Light 1
+                                </div>
+                            </div>
+                            <span type="button" class="glyphicon glyphicon-triangle-left"></span>
+                            <span type="button" class="glyphicon glyphicon-triangle-right"></span>
+                            <div class="progress">
+                                <div id="progress-light-2" class="progress-bar progress-bar-warning progress-bar-striped" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%">
+                                    Light 2
+                                </div>
+                            </div>
+                            <span type="button" class="glyphicon glyphicon-triangle-left"></span>
+                            <span type="button" class="glyphicon glyphicon-triangle-right"></span>
+                            <div class="progress">
+                                <div id="progress-light-3" class="progress-bar progress-bar-warning progress-bar-striped" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%">
+                                    Light 3
+                                </div>
+                            </div>
+                            <div class="separator"></div>
+                            <div class="panel-bottom">
+                                <div class="form-group">
+                                    <label for="sel1">Remove light:</label>
+                                    <select class="form-control" id="sel1">
+                                        <option>1</option>
+                                        <option>2</option>
+                                        <option>3</option>
+                                        <option>4</option>
+                                    </select>
+                                    <button id="removeLight" class="btn btn-default remove-btn">Remove light</button>
+                                    <div class="separator"></div>
+                                    <label for="addLightText">Add light:</label>
+                                    <input type="text" class="form-control" id="addLightText" placeholder="Light name">
+                                    <button id="addLight" class="btn btn-default">Add light</button>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-4">
+                <div class="list-group">
+                    <div class="list-group-item"><h3>Sounds</h3>
+                        <label class="switch">
+                            <input id="toggleSounds" type="checkbox" checked>
+                            <div class="slider round"></div>
+                        </label>
+                    </div>
+                    <div class="panel panel-default">
+                        <!-- Default panel contents -->
+                        <div class="panel-heading">Click on the bars to adjust sounds</div>
+                        <div class="panel-body">
+                            <span type="button" class="glyphicon glyphicon-triangle-left"></span>
+                            <span type="button" class="glyphicon glyphicon-triangle-right"></span>
+                            <div class="progress">
+                                <div id="progress-sound-1" class="progress-bar progress-bar-success progress-bar-striped" role="progressbar" aria-valuemin="0" aria-valuemax="100" style="width: 40%">
+                                    SoundUnit 1
+                                </div>
+                            </div>
+                            <span type="button" class="glyphicon glyphicon-triangle-left"></span>
+                            <span type="button" class="glyphicon glyphicon-triangle-right"></span>
+                            <div class="progress">
+                                <div id="progress-sound-2" class="progress-bar progress-bar-success progress-bar-striped" role="progressbar" aria-valuemin="0" aria-valuemax="100" style="width: 20%">
+                                    SoundUnit 2
+                                </div>
+                            </div>
+                            <span type="button" class="glyphicon glyphicon-triangle-left"></span>
+                            <span type="button" class="glyphicon glyphicon-triangle-right"></span>
+                            <div class="progress">
+                                <div id="progress-sound-3" class="progress-bar progress-bar-success progress-bar-striped" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%">
+                                    SoundUnit 3
+                                </div>
+                            </div>
+                            <div class="separator"></div>
+                            <div class="panel-bottom">
+                                <label for="deleteId">Remove sound device:</label>
+                                <select class="form-control" id="deleteId">
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                </select>
+                                <button id="removeSoundDevice" class="btn btn-default remove-btn">Remove sound device</button>
+                                <div class="separator"></div>
+                                <label for="newId">Add sound device:</label>
+                                <input type="text" placeholder="Sound device name"class="form-control" id="newId">
+                                <button id="addSoundDevice" class="btn btn-default">Add sound device</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-4">
+                <div class="list-group">
+                    <div class="list-group-item"><h3>Temperatures</h3>
+                        <label class="switch">
+                            <input id="toggleTemps" type="checkbox" checked>
+                            <div class="slider round"></div>
+                        </label>
+                    </div>
+
+                    <div class="panel panel-default">
+                            <!-- Default panel contents -->
+                        <div class="panel-heading">Click on the bars to adjust temperature</div>
+                            <div class="panel-body">
+                                <span type="button" class="glyphicon glyphicon-triangle-left"></span>
+                                <span type="button" class="glyphicon glyphicon-triangle-right"></span>
+                                <div class="progress">
+                                    <div id="progress-temp-1" class="progress-bar progress-bar-danger progress-bar-striped" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%">
+                                        Heatelement 1
+                                    </div>
+                                </div>
+                                <span type="button" class="glyphicon glyphicon-triangle-left"></span>
+                                <span type="button" class="glyphicon glyphicon-triangle-right"></span>
+                                <div class="progress">
+                                    <div id="progress-temp-2" class="progress-bar progress-bar-danger progress-bar-striped" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%">
+                                        Heatelement 2
+                                    </div>
+                                </div>
+                                <span type="button" class="glyphicon glyphicon-triangle-left"></span>
+                                <span type="button" class="glyphicon glyphicon-triangle-right"></span>
+                                <div class="progress">
+                                    <div id="progress-temp-3" class="progress-bar progress-bar-danger progress-bar-striped" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%">
+                                        Heatelement 3
+                                    </div>
+                                </div>
+                                <div class="separator"></div>
+
+                                <div class="panel-bottom">
+
+                                    <label for="deleteTempId">Remove heat element:</label>
+                                    <select class="form-control" id="deleteTempId">
+                                        <option>1</option>
+                                        <option>2</option>
+                                        <option>3</option>
+                                    </select>
+                                    <button id="removeTempButton" class="btn btn-default remove-btn">Remove heat element</button>
+                                    <div class="separator"></div>
+                                    <label for="addTempText">Add heat element:</label>
+                                    <input placeholder="Heat element name"type="text" class="form-control" id="newTempButton">
+                                    <button id="addTempText" class="btn btn-default">Add heat element</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

@@ -21,6 +21,12 @@
     -webkit-transition: .4s;
     transition: .4s;
 }
+.form-control{
+    width: 60%;
+}
+
+
+
 
 .slider:before {
     position: absolute;

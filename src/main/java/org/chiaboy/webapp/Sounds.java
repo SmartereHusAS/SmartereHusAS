@@ -14,7 +14,7 @@ public class Sounds {
     private int volume = 0;
 
     private static Map<String, SoundDevice> soundDevices = new HashMap<String, SoundDevice>() {{
-        put("1", new SoundDevice("1", "10")); //Test-value
+        put("1", new SoundDevice("1", "90")); //Test-value
         put("2", new SoundDevice("2", "20")); //Test-value
         put("3", new SoundDevice("3", "30")); //Test-value
     }};
@@ -27,7 +27,17 @@ public class Sounds {
 
         return soundDevices.values();
     }
-
+    @GET
+    @Path("/sounds/all")
+    @Produces("text/plain")
+    public Integer getTotalSound() {
+        Integer volume = 0;
+        for(SoundDevice device : soundDevices.values()){
+            volume += Integer.valueOf(device.getVolume());
+        }
+        volume = volume / soundDevices.size();
+        return volume;
+    }
     @GET
     @Path("/sounds/{soundDeviceId}")
     @Produces(MediaType.APPLICATION_JSON)
@@ -64,14 +74,13 @@ public class Sounds {
     public Alarms getAlarms(){
         return alarms;
     }
-
-    public void setVolume(int volume){
-        if(volume < 0 || volume > 100){
-            throw new InputMismatchException();
-        }
-        else{
-            this.volume = volume;
-        }
+    @POST
+    @Consumes(MediaType.APPLICATION_JSON)
+    public void addSound(String soundDeviceId, SoundDevice sd){
+        soundDevices.put(soundDeviceId, sd);
+    }
+    public boolean editVolume(String soundDeviceId, SoundDevice newVolume){
+        return soundDevices.containsKey(soundDeviceId) && soundDevices.replace(soundDeviceId, soundDevices.get(soundDeviceId), newVolume);
     }
 
 }
