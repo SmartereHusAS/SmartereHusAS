@@ -39,9 +39,9 @@ b)
 
 Gå gjennom brukergrensesnittet dere har laget i Øving 6 (skjermbilde for skjermbilde), og kommenter på hvert av dem mhp.
 
-    de fem punktene for brukskvalitet,
-    de sju punktene for universell utforming og
-    brukeropplevelsen.
+- de fem punktene for brukskvalitet,
+- de sju punktene for universell utforming og
+- brukeropplevelsen.
 
 Legg spesielt vekt på det dere kom fram til i deloppgave a). Foreslå så minst tre forbedringspunkter for hvert skjermbilde og implementer dem. Har dere mange skjermbilder skal dere gå gjennom alle, men dere trenger ikke å implementere endringer for mer enn fire av dem.) 
 
@@ -51,9 +51,9 @@ c)
 
 Lag en brukertest for det redesignede systemet deres. Dere bør gjennomføre testen på minst 3 personer som ikke er med i gruppa (og helst ikke i en annen gruppe med samme case). Dere skal lage
 
-    en plan for hvordan testen skal gjennomføres (fysiske omgivelser, teknologi, oppgaver som skal løses mm.),
-    en beskrivelse av resultatene, og
-    forslag til endringer av brukergrensesnittet basert på resultatene.
+- en plan for hvordan testen skal gjennomføres (fysiske omgivelser, teknologi, oppgaver som skal løses mm.),
+- en beskrivelse av resultatene, og
+- forslag til endringer av brukergrensesnittet basert på resultatene.
 
 (Disse endringene trenger dere ikke å implementere, men ta vare på dem til neste øving da vi skal jobbe videre med GUIet.)
 
