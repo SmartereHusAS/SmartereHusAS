@@ -29,8 +29,8 @@ a)
 
 I denne deloppgaven skal dere ikke tenke så mye konkret på hva dere allerede har laget, men heller prøve å tenke på caset som om dere skulle begynt fra skrætsj. Prøv å være litt ambisiøs på systemet sine vegne:
 
-    Elsykkelutleie: Hvorfor skal brukerne få lyst til å prøve, og deretter komme tilbake og fortsette å bruke det?
-    Smarthus: Smarthussystem er en stor investering, så brukerne trenger å følge seg trygge på at akkurat dere er det perfekte valget før de blar opp. Så hvorfor velge dere blant alle konkurrentene?
+- Elsykkelutleie: Hvorfor skal brukerne få lyst til å prøve, og deretter komme tilbake og fortsette å bruke det?
+- Smarthus: Smarthussystem er en stor investering, så brukerne trenger å følge seg trygge på at akkurat dere er det perfekte valget før de blar opp. Så hvorfor velge dere blant alle konkurrentene?
 
 Definer målgruppen for systemet dere lager og beskriv brukeropplevelsen dere ønsker de skal ha når de bruker det (se hvordan brukeropplevelsen er beskrevet i leksjonen, ta utgangspunkt i det). Bestem også hva dere mener er de viktigste elementene av brukskvalitet og universell utforming for systemet deres (dette kan tenkes på som en del av brukeropplevelsen).
  
