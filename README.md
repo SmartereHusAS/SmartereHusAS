@@ -22,3 +22,39 @@ Lag en enkel frontend for casen.
 - Legg vekt på å få opp skjermbilder og funksjonalitet, ikke tenk så mye på utseende
 - Bruk jQuery for AJAX-kall mot REST-serveren dere lagde i forrige øving.
 - Bruk Bootstrap eller et annet CSS-rammeverk, men som sagt skal dere gjøre GUI'et enkelt.
+- 
+#Case 7
+
+a)
+
+I denne deloppgaven skal dere ikke tenke så mye konkret på hva dere allerede har laget, men heller prøve å tenke på caset som om dere skulle begynt fra skrætsj. Prøv å være litt ambisiøs på systemet sine vegne:
+
+    Elsykkelutleie: Hvorfor skal brukerne få lyst til å prøve, og deretter komme tilbake og fortsette å bruke det?
+    Smarthus: Smarthussystem er en stor investering, så brukerne trenger å følge seg trygge på at akkurat dere er det perfekte valget før de blar opp. Så hvorfor velge dere blant alle konkurrentene?
+
+Definer målgruppen for systemet dere lager og beskriv brukeropplevelsen dere ønsker de skal ha når de bruker det (se hvordan brukeropplevelsen er beskrevet i leksjonen, ta utgangspunkt i det). Bestem også hva dere mener er de viktigste elementene av brukskvalitet og universell utforming for systemet deres (dette kan tenkes på som en del av brukeropplevelsen).
+ 
+
+b)
+
+Gå gjennom brukergrensesnittet dere har laget i Øving 6 (skjermbilde for skjermbilde), og kommenter på hvert av dem mhp.
+
+    de fem punktene for brukskvalitet,
+    de sju punktene for universell utforming og
+    brukeropplevelsen.
+
+Legg spesielt vekt på det dere kom fram til i deloppgave a). Foreslå så minst tre forbedringspunkter for hvert skjermbilde og implementer dem. Har dere mange skjermbilder skal dere gå gjennom alle, men dere trenger ikke å implementere endringer for mer enn fire av dem.) 
+
+ 
+
+c)
+
+Lag en brukertest for det redesignede systemet deres. Dere bør gjennomføre testen på minst 3 personer som ikke er med i gruppa (og helst ikke i en annen gruppe med samme case). Dere skal lage
+
+    en plan for hvordan testen skal gjennomføres (fysiske omgivelser, teknologi, oppgaver som skal løses mm.),
+    en beskrivelse av resultatene, og
+    forslag til endringer av brukergrensesnittet basert på resultatene.
+
+(Disse endringene trenger dere ikke å implementere, men ta vare på dem til neste øving da vi skal jobbe videre med GUIet.)
+
+ 
