@@ -3,14 +3,12 @@ package org.chiaboy.webapp;
 public class Temperature {
     private String id;
     private String desc;
-    private double floorTemp;
-    private double ambientTemp;
+    private int temp;
 
-    public Temperature(String id, String desc, double floorTemp, double ambientTemp) {
+    public Temperature(String id, String desc, int temp) {
         this.id = id;
         this.desc = desc;
-        this.floorTemp = floorTemp;
-        this.ambientTemp = ambientTemp;
+        this.temp = temp;
     }
 
     public Temperature() {}
@@ -27,23 +25,17 @@ public class Temperature {
         return desc;
     }
 
-    public double getFloorTemp() {
-        return floorTemp;
+    public int getTemp() {
+        return temp;
     }
 
-    public double getAmbientTemp() {
-        return ambientTemp;
+
+    public void setTemp(int newTemp) {
+        this.temp = newTemp;
     }
 
-    public void setFloorTemp(double newTemp) {
-        floorTemp = newTemp;
-    }
-
-    public void setAmbientTemp(double newTemp) {
-        ambientTemp = newTemp;
-    }
 
     public String toString() {
-        return "ID: " + id + "\nDescription: " + desc + "\nFloor temperature: " + floorTemp + "\nAmbient temperature: " + ambientTemp;
+        return "ID: " + id + "\nDescription: " + desc + "\nTemperature: " + temp;
     }
 }

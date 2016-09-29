@@ -34,8 +34,13 @@
             <h1>Smartere Hus AS</h1>
             <p>Her kan du administrere ditt smarthus!</p>
         </div>
+        <a href="/house/">
+            <button type="button" class="btn btn-primary">Back to house</button>
+        </a>
         <div class="container">
+
             <!-- Single button -->
+            <div class="room-container"></div>
             <div class="col-sm-4">
                 <div class="list-group">
                     <div class="list-group-item"><h3>Lights</h3>
@@ -69,11 +74,19 @@
                                     Light 3
                                 </div>
                             </div>
+                            <div class="separator"></div>
                             <div class="panel-bottom">
-                                <input id="lightId" type="text">
-                                <button id="addLight" type="button" class="btn btn-primary">Add light</button>
-                                <button id="removeLight" type="button" class="btn btn-primary">Remove light</button>
-                                <br>
+                                <label for="">Remove light:</label>
+                                <select class="form-control" id="">
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                </select>
+                                <button id="" class="btn btn-default remove-btn">Remove light</button>
+                                <div class="separator"></div>
+                                <label for="">Add light:</label>
+                                <input type="text" placeholder="Light name"class="form-control" id="">
+                                <button id="" class="btn btn-default">Add light</button>
                             </div>
                         </div>
 
@@ -115,11 +128,17 @@
                                 </div>
                             </div>
                             <div class="panel-bottom">
-                                <input id="newId" value="input id" type="text">
-                                <input id="newVolume" value="input volume" type="text">
-                                <button id="addSoundDevice" type="button" class="btn btn-primary">Add sound device</button>
-                                <input id="deleteId" value="input id to delete" type="text">
-                                <button id="removeSoundDevice" type="button" class="btn btn-primary">Remove sound device</button>
+                                <label for="">Remove sound unit:</label>
+                                <select class="form-control" id="">
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                </select>
+                                <button id="" class="btn btn-default remove-btn">Remove sound unit</button>
+                                <div class="separator"></div>
+                                <label for="">Add sound unit:</label>
+                                <input type="text" placeholder="Sound device name"class="form-control" id="">
+                                <button id="" class="btn btn-default">Add sound unit</button>
                             </div>
                         </div>
                     </div>
@@ -161,10 +180,17 @@
                                 </div>
                             </div>
                             <div class="panel-bottom">
-                                <input id="tempId" type="text">
-                                <button id="addTemp" type="button" class="btn btn-primary">Add heat element</button>
-                                <button id="removeTemp" type="button" class="btn btn-primary">Remove heat element</button>
-                                <br>
+                                <label for="">Remove temp unit:</label>
+                                <select class="form-control" id="">
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                </select>
+                                <button id="" class="btn btn-default remove-btn">Remove temp unit</button>
+                                <div class="separator"></div>
+                                <label for="">Add temp unit:</label>
+                                <input type="text" placeholder="temp unit name"class="form-control" id="">
+                                <button id="" class="btn btn-default">Add temp unit</button>
                             </div>
                         </div>
                     </div>

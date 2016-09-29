@@ -10,6 +10,10 @@ import java.util.Map;
 public class Room {
     private String id;
     private String name;
+    private int totalLights;
+    private int totalSounds;
+    private int totalTemps;
+
     private static Map<String, SoundDevice> sounds;
     private static Map<String, Light> lights;
     private static Map<String, Temperature> temps;
@@ -18,9 +22,21 @@ public class Room {
     public Room(String id, String name){
         this.id = id;
         this.name = name;
-        sounds = new HashMap<String, SoundDevice>();
-        lights = new HashMap<String, Light>();
-        temps = new HashMap<String, Temperature>();
+        sounds = new HashMap<String, SoundDevice>() {{
+            put("1", new SoundDevice("1", "generic desc", "10")); //Test-value
+            put("2", new SoundDevice("2", "generic desc", "20")); //Test-value
+            put("3", new SoundDevice("3", "generic desc", "30")); //Test-value
+        }};
+        lights = new HashMap<String, Light>() {{
+            put("1", new Light("1", "generic desc", true, 11)); //Test-value
+            put("2", new Light("2", "generic desc", true, 22)); //Test-value
+            put("3", new Light("3", "generic desc", true, 63)); //Test-value
+        }};
+        temps = new HashMap<String, Temperature>() {{
+            put("1", new Temperature("1", "generic desc", 11)); //Test-value
+            put("2", new Temperature("2", "generic desc", 22)); //Test-value
+            put("3", new Temperature("3", "generic desc", 33)); //Test-value
+        }};
     }
 
     public Room() {}
@@ -49,7 +65,8 @@ public class Room {
     public Collection<Light> getLights() {
         return lights.values();
     }
-
+    public void setLights(Collection<Light> s) {
+    }
     public Light getLight(String id) {
         return lights.get(id);
     }
@@ -62,6 +79,17 @@ public class Room {
         lights.remove(id);
     }
 
+    public int getTotalLights(){
+        int out = 0;
+        for(Light light : this.lights.values()){
+            out += light.getWattage();
+        }
+        return out/(lights.size());
+    }
+    public void setTotalLights(int total){
+
+    }
+
 
     //
     // Sounds
@@ -69,6 +97,8 @@ public class Room {
 
     public Collection<SoundDevice> getSounds() {
         return sounds.values();
+    }
+    public void setSounds(Collection<SoundDevice> s) {
     }
 
     public SoundDevice getSoundDevice(String id) {
@@ -92,6 +122,18 @@ public class Room {
     }
 
 
+    public int getTotalSounds(){
+        int out = 0;
+        for(SoundDevice sound : sounds.values()){
+            out += Integer.valueOf(sound.getVolume());
+        }
+        System.out.print(sounds.size());
+        return out/sounds.size();
+    }
+    public void setTotalSounds(int total){
+
+    }
+
     //
     // Temps
     //
@@ -99,7 +141,8 @@ public class Room {
     public Collection<Temperature> getTemps() {
         return temps.values();
     }
-
+    public void setTemps(Collection<Temperature> s) {
+    }
     public Temperature getTemp(String id) {
         return temps.get(id);
     }
@@ -112,6 +155,16 @@ public class Room {
         temps.remove(id);
     }
 
+    public int getTotalTemps(){
+        int out = 0;
+        for(Temperature temp : this.temps.values()){
+            out += temp.getTemp();
+        }
+        return out/temps.size();
+    }
+    public void setTotalTemps(int total){
+
+    }
 
 
 

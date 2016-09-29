@@ -7,9 +7,9 @@ import java.util.*;
 
 public class Temperatures {
     private static Map<String, Temperature> temps = new HashMap<String, Temperature>() {{
-        put("1", new Temperature("1", "generic desc", 11.1, 1.11)); //Test-value
-        put("2", new Temperature("2", "generic desc", 22.2, 2.22)); //Test-value
-        put("3", new Temperature("3", "generic desc", 33.3, 3.33)); //Test-value
+        put("1", new Temperature("1", "generic desc", 11)); //Test-value
+        put("2", new Temperature("2", "generic desc", 22)); //Test-value
+        put("3", new Temperature("3", "generic desc", 33)); //Test-value
     }};
 
 
