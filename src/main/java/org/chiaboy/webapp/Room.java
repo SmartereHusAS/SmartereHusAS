@@ -65,8 +65,9 @@ public class Room {
     public Collection<Light> getLights() {
         return lights.values();
     }
-    public void setLights(Collection<Light> s) {
-    }
+
+    public void setLights(Collection<Light> t) {}
+
     public Light getLight(String id) {
         return lights.get(id);
     }
@@ -86,9 +87,8 @@ public class Room {
         }
         return out/(lights.size());
     }
-    public void setTotalLights(int total){
 
-    }
+    public void setTotalLights(int total){}
 
 
     //
@@ -98,8 +98,8 @@ public class Room {
     public Collection<SoundDevice> getSounds() {
         return sounds.values();
     }
-    public void setSounds(Collection<SoundDevice> s) {
-    }
+
+    public void setSounds(Collection<SoundDevice> s) {}
 
     public SoundDevice getSoundDevice(String id) {
         return sounds.get(id);
@@ -121,18 +121,15 @@ public class Room {
         sounds.remove(id);
     }
 
-
     public int getTotalSounds(){
         int out = 0;
         for(SoundDevice sound : sounds.values()){
             out += Integer.valueOf(sound.getVolume());
         }
-        System.out.print(sounds.size());
         return out/sounds.size();
     }
-    public void setTotalSounds(int total){
 
-    }
+    public void setTotalSounds(int total){}
 
     //
     // Temps
@@ -141,8 +138,9 @@ public class Room {
     public Collection<Temperature> getTemps() {
         return temps.values();
     }
-    public void setTemps(Collection<Temperature> s) {
-    }
+
+    public void setTemps(Collection<Temperature> t) {}
+
     public Temperature getTemp(String id) {
         return temps.get(id);
     }
@@ -162,9 +160,8 @@ public class Room {
         }
         return out/temps.size();
     }
-    public void setTotalTemps(int total){
 
-    }
+    public void setTotalTemps(int total){}
 
 
 
