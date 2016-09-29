@@ -9,9 +9,6 @@ import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 
-/**
- * Created by Magnusfn on 16.09.2016.
- */
 public class Alarms extends Thread {
     private static int alarmVolume;
     private static Date time;

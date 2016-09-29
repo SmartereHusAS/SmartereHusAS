@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+        <title>Smartere Hus AS</title>
+
+        <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+        <!-- user-defined styles -->
+        <link rel="stylesheet" href="css/style.css">
+        <script src="js/house_script.js"></script>
+    </head>
+
+    <body>
+        <div class="jumbotron text-center">
+            <h1>Smartere Hus AS</h1>
+            <p>Her kan du administrere ditt smarthus!</p>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-4">
+                    <div class="list-group">
+                        <button id="addRoom" type="button" class="list-group-item" data-toggle="modal" data-target="#myModal">
+                            <span class="glyphicon glyphicon-plus"></span>
+                            <h3 id="addText">Add room</h3>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Modal -->
+                <div id="myModal" class="modal fade" role="dialog">
+                    <div class="modal-dialog">
+
+                        <!-- Modal content-->
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                <h4 class="modal-title">Input information</h4>
+                            </div>
+                            <div class="modal-body">
+                                <form>
+                                    <div class="form-group">
+                                        <label for="roomName">Room name:</label>
+                                        <input type="text" class="form-control" id="roomName" placeholder="Enter name">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="roomId">Room ID:</label>
+                                        <input type="text" class="form-control" id="roomId" placeholder="Enter ID">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="exampleTextarea">Description(no function yet)</label>
+                                        <textarea class="form-control" id="exampleTextarea" rows="3"></textarea>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="submit" id="submitRoomData" class="btn btn-primary" data-dismiss="modal">Submit</button>
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-4">
+                    <div class="list-group">
+                        <a href="rooms/1.html"><button type="button" class="list-group-item"><h3>Kitchen</h3></button></a>
+                        <div class="panel panel-default">
+                            <!-- Default panel contents -->
+                            <div class="panel-heading">Current kitchen settings</div>
+                            <div class="panel-body">
+                                <div class="progress">
+                                    <div class="progress-bar progress-bar-success progress-bar-striped" role="progressbar" aria-valuenow="update()" aria-valuemin="0" aria-valuemax="100" style="width: 40%">
+                                        Lights
+                                    </div>
+                                </div>
+                                <div class="progress">
+                                    <div class="progress-bar progress-bar-warning progress-bar-striped" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%">
+                                        Sounds
+                                    </div>
+                                </div>
+                                <div class="progress">
+                                    <div class="progress-bar progress-bar-danger progress-bar-striped" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%">
+                                        Temperatures
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-4">
+                    <div class="list-group">
+                        <button type="button" class="list-group-item"><h3>Livingroom</h3></button>
+                        <div class="panel panel-default">
+                            <!-- Default panel contents -->
+                            <div class="panel-heading">Current livingroom settings</div>
+                            <div class="panel-body">
+                                <div class="progress">
+                                    <div class="progress-bar progress-bar-success progress-bar-striped" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%">
+                                        Lights
+                                    </div>
+                                </div>
+                                <div class="progress">
+                                    <div class="progress-bar progress-bar-warning progress-bar-striped" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%">
+                                        Sounds
+                                    </div>
+                                </div>
+                                <div class="progress">
+                                    <div class="progress-bar progress-bar-danger progress-bar-striped" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%">
+                                        Temperatures
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-4">
+                    <div class="list-group">
+                        <button type="button" class="list-group-item"><h3>Bedroom</h3></button>
+                        <div class="panel panel-default">
+                            <!-- Default panel contents -->
+                            <div class="panel-heading">Current bedroom settings</div>
+                            <div class="panel-body">
+                                <div class="progress">
+                                    <div class="progress-bar progress-bar-success progress-bar-striped" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%">
+                                        Lights
+                                    </div>
+                                </div>
+                                <div class="progress">
+                                    <div class="progress-bar progress-bar-warning progress-bar-striped" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%">
+                                        Sounds
+                                    </div>
+                                </div>
+                                <div class="progress">
+                                    <div class="progress-bar progress-bar-danger progress-bar-striped" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%">
+                                        Temperatures
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-4">
+                    <div class="list-group">
+                        <a href="rooms/test-site.html"><button type="button" class="list-group-item"><h3>Testing</h3></button></a>
+                        <div class="panel panel-default">
+                            <!-- Default panel contents -->
+                            <div class="panel-heading">*insert sob story here*</div>
+                            <div class="panel-body">
+                                <div class="progress">
+                                    <div class="progress-bar progress-bar-success progress-bar-striped" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%">
+                                        Lights
+                                    </div>
+                                </div>
+                                <div class="progress">
+                                    <div class="progress-bar progress-bar-warning progress-bar-striped" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%">
+                                        Sounds
+                                    </div>
+                                </div>
+                                <div class="progress">
+                                    <div class="progress-bar progress-bar-danger progress-bar-striped" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%">
+                                        Temperatures
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

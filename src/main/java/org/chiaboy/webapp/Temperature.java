@@ -1,15 +1,14 @@
 package org.chiaboy.webapp;
 
-/**
- * Created by asdfLaptop on 16.09.2016.
- */
 public class Temperature {
     private String id;
+    private String desc;
     private double floorTemp;
     private double ambientTemp;
 
-    public Temperature(String id, double floorTemp, double ambientTemp) {
+    public Temperature(String id, String desc, double floorTemp, double ambientTemp) {
         this.id = id;
+        this.desc = desc;
         this.floorTemp = floorTemp;
         this.ambientTemp = ambientTemp;
     }
@@ -22,6 +21,10 @@ public class Temperature {
 
     public void setId(String id) {
         this.id = id;
+    }
+
+    public String getDesc() {
+        return desc;
     }
 
     public double getFloorTemp() {
@@ -41,6 +44,6 @@ public class Temperature {
     }
 
     public String toString() {
-        return "Floor temperature: " + floorTemp + "\n Ambient temperature: " + ambientTemp;
+        return "ID: " + id + "\nDescription: " + desc + "\nFloor temperature: " + floorTemp + "\nAmbient temperature: " + ambientTemp;
     }
 }

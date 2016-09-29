@@ -4,9 +4,6 @@ import org.joda.time.DateTime;
 import java.util.Date;
 import java.util.InputMismatchException;
 
-/**
- * Created by Evdal on 16.09.2016.
- */
 public class Alarm {
     private DateTime alarmTime;
     private Room room;
@@ -37,6 +34,7 @@ public class Alarm {
         return alarmTime;
     }
 
+
     public Room getRoom(){
         return room;
     }
@@ -44,7 +42,7 @@ public class Alarm {
     public void addAlarmTime(int minutes){
         alarmTime.plusMinutes(minutes);
     }
-
+/*
     public void goOff(){
         room.getSounds().setVolume(80);
     }
@@ -52,4 +50,5 @@ public class Alarm {
         room.getSounds().setVolume(0);
     }
 
+*/
 }

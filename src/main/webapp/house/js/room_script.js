@@ -1,20 +1,27 @@
+// The root URL for the RESTful services
+var rootURL = "http://localhost:8080/api/rooms/";
+
 $(document).ready(function(){
     $("#progress-sound-1").ready(function() {
-        $.getJSON('app/rooms/1/sounds/1', function(result) {
-            $("#progress-sound-1").attr("aria-valuenow", result.volume).css("width", (result.volume*2));
+        $.getJSON(rootURL + '1/sounds/1', function(result) {
+            if(result != null) {
+                $("#progress-sound-1").attr("aria-valuenow", result.volume).css("width", (result.volume*2));
+            }
         });
     });
 
     $("#progress-sound-2").ready(function() {
-        $.getJSON('app/rooms/1/sounds/2', function(result) {
-            $("#progress-sound-2").attr("aria-valuenow", result.volume).css("width", (result.volume*2));
-        });
+        $.getJSON(rootURL + '1/sounds/2', function(result) {
+            if(result != null) {
+                $("#progress-sound-2").attr("aria-valuenow", result.volume).css("width", (result.volume*2));
+            }        });
     });
 
     $("#progress-sound-3").ready(function() {
-        $.getJSON('app/rooms/1/sounds/3', function(result) {
-            $("#progress-sound-3").attr("aria-valuenow", result.volume).css("width", (result.volume*2));
-        });
+        $.getJSON(rootURL + '1/sounds/3', function(result) {
+            if(result != null) {
+                $("#progress-sound-3").attr("aria-valuenow", result.volume).css("width", (result.volume*2));
+            }        });
     });
 
     $(".glyphicon").click(function(){
@@ -46,11 +53,12 @@ $(document).ready(function(){
                         $("#progress-light-3").css("width", "+=20");
                         break;
 
+                    //FIXME: make it possible to fetch both roomId and soundDeviceId from the url(?)
                     case 6:
                         currVol = ($("#progress-sound-1").attr("aria-valuenow"));
                         $("#progress-sound-1").attr("aria-valuenow", ((currVol*1)-10)).css("width", "-=20");
                         $.ajax({
-                            url: 'app/rooms/1/sounds/1',
+                            url: rootURL + '1/sounds/1',
                             type: 'PUT',
                             data: currVol,
                             contentType: 'application/json; charset=utf-8',
@@ -61,13 +69,17 @@ $(document).ready(function(){
                             }
                         });
                         break;
+                    //FIXME: make it possible to fetch both roomId and soundDeviceId from the url(?)
                     case 7:
                         currVol = $("#progress-sound-1").attr("aria-valuenow");
                         $("#progress-sound-1").attr("aria-valuenow", ((currVol*1)+10)).css("width", "+=20");
                         $.ajax({
-                            url: 'app/rooms/1/sounds/1',
+                            url: rootURL + '1/sounds/1',
                             type: 'PUT',
-                            data: currVol,
+                            data: JSON.stringify({
+                                id: 1,
+                                volume: currVol,
+                            }),
                             contentType: 'application/json; charset=utf-8',
                             dataType: 'json',
                             success: function(result) {
@@ -80,7 +92,7 @@ $(document).ready(function(){
                         var currVol = $("#progress-sound-2").attr("aria-valuenow");
                         $("#progress-sound-2").attr("aria-valuenow", ((currVol*1)-10)).css("width", "-=20");
                         $.ajax({
-                            url: 'app/rooms/1/sounds/2',
+                            url: rootURL + '1/sounds/2',
                             type: 'PUT',
                             data: currVol,
                             contentType: 'application/json; charset=utf-8',
@@ -95,7 +107,7 @@ $(document).ready(function(){
                         currVol = $("#progress-sound-2").attr("aria-valuenow");
                         $("#progress-sound-2").attr("aria-valuenow", ((currVol*1)+10)).css("width", "+=20");
                         $.ajax({
-                            url: 'app/rooms/1/sounds/2',
+                            url: rootURL + '1/sounds/2',
                             type: 'PUT',
                             data: currVol,
                             contentType: 'application/json; charset=utf-8',
@@ -110,7 +122,7 @@ $(document).ready(function(){
                         currVol = $("#progress-sound-3").attr("aria-valuenow");
                         $("#progress-sound-3").attr("aria-valuenow", ((currVol*1)-10)).css("width", "-=20");
                         $.ajax({
-                            url: 'app/rooms/1/sounds/3',
+                            url: rootURL + '1/sounds/3',
                             type: 'PUT',
                             data: currVol,
                             contentType: 'application/json; charset=utf-8',
@@ -125,7 +137,7 @@ $(document).ready(function(){
                         currVol = $("#progress-sound-3").attr("aria-valuenow");
                         $("#progress-sound-3").attr("aria-valuenow", ((currVol*1)+10)).css("width", "+=20");
                         $.ajax({
-                            url: 'app/rooms/1/sounds/3',
+                            url: rootURL + '1/sounds/3',
                             type: 'PUT',
                             data: currVol,
                             contentType: 'application/json; charset=utf-8',
@@ -161,27 +173,34 @@ $(document).ready(function(){
         }
     });
 
-
+    //FIXME: finn romnr og sett det inn som parameter.
     $("#addSoundDevice").click(function () {
+        addSoundDevice(1);
+        return false;
+    });
+
+    function addSoundDevice(roomId) {
+        console.log('addSoundDevice');
         $.ajax({
-            url: 'app/rooms/1/sounds',
             type: 'POST',
+            contentType: 'application/json',
+            url: rootURL + roomId + '/sounds',
+            dataType: "json",
             data: JSON.stringify({
                 id: $("#newId").val(),
                 volume: $("#newVolume").val(),
             }),
-            contentType: 'application/json; charset=utf-8',
-            dataType: 'json',
-            success: function(result) {
-                console.log("Device added!");
+            success: function(data, textStatus, jqXHR){
+                alert('Device added!');
                 window.location.reload();
             }
         });
-    });
+    }
+
 
     $("#removeSoundDevice").click(function () {
         $.ajax({
-            url: 'app/rooms/1/sounds/' + $("#deleteId").val(),
+            url: rootURL + '1/sounds/' + $("#deleteId").val(),
             type: 'DELETE',
             success: function(result) {
                 console.log("Device deleted!");

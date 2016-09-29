@@ -1,15 +1,13 @@
 package org.chiaboy.webapp;
 
-/**
- * Created by Magnusfn on 16.09.2016.
- */
-
 public class SoundDevice {
     private String id;
+    private String desc;
     private String volume;
 
-    public SoundDevice(String id, String volume) {
+    public SoundDevice(String id, String desc, String volume) {
         this.id = id;
+        this.desc = desc;
         this.volume = volume;
     }
 
@@ -23,12 +21,20 @@ public class SoundDevice {
         this.id = id;
     }
 
+    public String getDesc() {
+        return desc;
+    }
+
     public String getVolume() {
         return volume;
     }
 
     public void setVolume(String volume){
         this.volume = volume;
+    }
+
+    public String toString() {
+        return "ID: " + id + "\nDescription: " + desc + "\nVolume: " + volume;
     }
 
 }

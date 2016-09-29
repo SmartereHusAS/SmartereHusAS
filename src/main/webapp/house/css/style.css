@@ -1,0 +1,59 @@
+.progress{
+    cursor: default;
+}
+
+.glyphicon{
+    margin: 3px 5px;
+    cursor: pointer;
+}
+
+.glyphicon-triangle-left{
+    float: left;
+}
+
+.glyphicon-triangle-right{
+    float: right;
+}
+
+.glyphicon-plus {
+    vertical-align: middle;
+    font-size: 138px;
+    font-family: Arial;
+}
+
+.btn-primary{
+    margin-bottom: 5px;
+    margin-top: 5px;
+    margin-left: 0%;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+
+.progress-bar{
+    max-width: 100%;
+}
+
+.list-group-item:last-child {
+    margin-bottom: -1px;
+}
+
+button.list-group-item {
+    width: 100%;
+    text-align: center;
+}
+
+#addText{
+    font-size: 40px;
+    text-align: -webkit-center;
+    margin-top: -14px;
+    margin-left: 6px;
+}
+
+#addRoom{
+    margin-top: 40px;
+}
+
+.modal{
+    top: 239px;
+}
