@@ -25,6 +25,10 @@ public class Temperature {
         return desc;
     }
 
+    public void setDesc(String desc) {
+        this.desc = desc;
+    }
+
     public int getTemp() {
         return temp;
     }

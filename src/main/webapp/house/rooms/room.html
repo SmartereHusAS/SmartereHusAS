@@ -30,167 +30,149 @@
     </head>
 
     <body>
-        <div class="jumbotron text-center">
-            <h1>Smartere Hus AS</h1>
-            <p>Her kan du administrere ditt smarthus!</p>
-        </div>
+        <div class="jumbotron text-center" id="roomName"></div>
+
         <a href="/house/">
             <button type="button" class="btn btn-primary">Back to house</button>
         </a>
+
         <div class="container">
+            <div class="row">
 
-            <!-- Single button -->
-            <div class="room-container"></div>
-            <div class="col-sm-4">
-                <div class="list-group">
-                    <div class="list-group-item"><h3>Lights</h3>
-                        <label class="switch">
-                            <input id="toggleLights" type="checkbox" checked>
-                            <div class="slider round"></div>
-                        </label>
-                    </div>
-                    <div class="panel panel-default">
-                        <!-- Default panel contents -->
-                        <div class="panel-heading">Click on the arrows to adjust light</div>
-                        <div class="panel-body">
-                            <span type="button" class="glyphicon glyphicon-triangle-left"></span>
-                            <span type="button" class="glyphicon glyphicon-triangle-right"></span>
-                            <div  class="progress">
-                                <div id="progress-light-1" class="progress-bar progress-bar-warning progress-bar-striped" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%">
-                                    Light 1
-                                </div>
-                            </div>
-                            <span type="button" class="glyphicon glyphicon-triangle-left"></span>
-                            <span type="button" class="glyphicon glyphicon-triangle-right"></span>
-                            <div class="progress">
-                                <div id="progress-light-2" class="progress-bar progress-bar-warning progress-bar-striped" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%">
-                                    Light 2
-                                </div>
-                            </div>
-                            <span type="button" class="glyphicon glyphicon-triangle-left"></span>
-                            <span type="button" class="glyphicon glyphicon-triangle-right"></span>
-                            <div class="progress">
-                                <div id="progress-light-3" class="progress-bar progress-bar-warning progress-bar-striped" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%">
-                                    Light 3
-                                </div>
-                            </div>
-                            <div class="separator"></div>
-                            <div class="panel-bottom">
-                                <label for="">Remove light:</label>
-                                <select class="form-control" id="">
-                                    <option>1</option>
-                                    <option>2</option>
-                                    <option>3</option>
-                                </select>
-                                <button id="" class="btn btn-default remove-btn">Remove light</button>
-                                <div class="separator"></div>
-                                <label for="">Add light:</label>
-                                <input type="text" placeholder="Light name"class="form-control" id="">
-                                <button id="" class="btn btn-default">Add light</button>
-                            </div>
+                <div class="col-sm-4">
+                    <div class="list-group">
+                        <div class="list-group-item"><h3>Sounds</h3>
+                            <label class="switch">
+                                <input id="toggleSounds" type="checkbox" checked>
+                                <div class="slider round"></div>
+                            </label>
                         </div>
+                        <div class="panel panel-default">
+                            <div class="panel-heading">Click on the bars to adjust sounds</div>
+                            <div class="panel-body">
+                                <div class="progressSound"></div>
 
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-sm-4">
-                <div class="list-group">
-                    <div class="list-group-item"><h3>Sounds</h3>
-                        <label class="switch">
-                            <input id="toggleSounds" type="checkbox" checked>
-                            <div class="slider round"></div>
-                        </label>
-                    </div>
-                    <div class="panel panel-default">
-                        <!-- Default panel contents -->
-                        <div class="panel-heading">Click on the bars to adjust sounds</div>
-                        <div class="panel-body">
-                            <span type="button" class="glyphicon glyphicon-triangle-left"></span>
-                            <span type="button" class="glyphicon glyphicon-triangle-right"></span>
-                            <div class="progress">
-                                <div id="progress-sound-1" class="progress-bar progress-bar-success progress-bar-striped" role="progressbar" aria-valuemin="0" aria-valuemax="100" style="width: 40%">
-                                    SoundUnit 1
+                                <div class="panel-bottom">
+                                    <label for="delSoundId">Remove sound unit:</label>
+                                    <select class="form-control" id="delSoundId">
+                                        <option>1</option>
+                                        <option>2</option>
+                                        <option>3</option>
+                                    </select>
+                                    <button class="btn btn-default remove-btn" id="removeSoundUnit">Remove sound unit</button>
+                                    <div class="separator"></div>
+                                    <label>Add sound unit:</label>
+                                    <input type="text" placeholder="Sound unit name"class="form-control" id="soundUnitDesc">
+                                    <button class="btn btn-default" id="addSoundUnit">Add sound unit</button>
                                 </div>
-                            </div>
-                            <span type="button" class="glyphicon glyphicon-triangle-left"></span>
-                            <span type="button" class="glyphicon glyphicon-triangle-right"></span>
-                            <div class="progress">
-                                <div id="progress-sound-2" class="progress-bar progress-bar-success progress-bar-striped" role="progressbar" aria-valuemin="0" aria-valuemax="100" style="width: 20%">
-                                    SoundUnit 2
-                                </div>
-                            </div>
-                            <span type="button" class="glyphicon glyphicon-triangle-left"></span>
-                            <span type="button" class="glyphicon glyphicon-triangle-right"></span>
-                            <div class="progress">
-                                <div id="progress-sound-3" class="progress-bar progress-bar-success progress-bar-striped" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%">
-                                    SoundUnit 3
-                                </div>
-                            </div>
-                            <div class="panel-bottom">
-                                <label for="">Remove sound unit:</label>
-                                <select class="form-control" id="">
-                                    <option>1</option>
-                                    <option>2</option>
-                                    <option>3</option>
-                                </select>
-                                <button id="" class="btn btn-default remove-btn">Remove sound unit</button>
-                                <div class="separator"></div>
-                                <label for="">Add sound unit:</label>
-                                <input type="text" placeholder="Sound device name"class="form-control" id="">
-                                <button id="" class="btn btn-default">Add sound unit</button>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
 
-            <div class="col-sm-4">
-                <div class="list-group">
-                    <div class="list-group-item"><h3>Temperatures</h3>
-                        <label class="switch">
-                            <input id="toggleTemps" type="checkbox" checked>
-                            <div class="slider round"></div>
-                        </label>
+                <div class="col-sm-4">
+                    <div class="list-group">
+                        <div class="list-group-item"><h3>Lights</h3>
+                            <label class="switch">
+                                <input id="toggleLights" type="checkbox" checked>
+                                <div class="slider round"></div>
+                            </label>
+                        </div>
+                        <div class="panel panel-default">
+                            <div class="panel-heading">Click on the bars to adjust lights</div>
+                            <div class="panel-body">
+                                <div class="progressLight"></div>
+
+                                <div class="panel-bottom">
+                                    <label for="delLightId">Remove light unit:</label>
+                                    <select class="form-control" id="delLightId">
+                                        <option>1</option>
+                                        <option>2</option>
+                                        <option>3</option>
+                                    </select>
+                                    <button class="btn btn-default remove-btn" id="removeLightUnit">Remove light unit</button>
+                                    <div class="separator"></div>
+                                    <label>Add light unit:</label>
+                                    <input type="text" placeholder="Light unit name"class="form-control" id="lightUnitDesc">
+                                    <button class="btn btn-default" id="addLightUnit">Add light unit</button>
+                                </div>
+                            </div>
+                        </div>
                     </div>
+                </div>
 
-                    <div class="panel panel-default">
-                        <!-- Default panel contents -->
-                        <div class="panel-heading">Click on the bars to adjust temperature</div>
-                        <div class="panel-body">
-                            <span type="button" class="glyphicon glyphicon-triangle-left"></span>
-                            <span type="button" class="glyphicon glyphicon-triangle-right"></span>
-                            <div class="progress">
-                                <div id="progress-temp-1" class="progress-bar progress-bar-danger progress-bar-striped" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%">
-                                    Heatelement 1
+                <div class="col-sm-4">
+                    <div class="list-group">
+                        <div class="list-group-item"><h3>Temperatures</h3>
+                            <label class="switch">
+                                <input id="toggleTemps" type="checkbox" checked>
+                                <div class="slider round"></div>
+                            </label>
+                        </div>
+                        <div class="panel panel-default">
+                            <div class="panel-heading">Click on the bars to adjust temperatures</div>
+                            <div class="panel-body">
+                                <div class="progressTemp"></div>
+
+                                <div class="panel-bottom">
+                                    <label for="delTempId">Remove temperature unit:</label>
+                                    <select class="form-control" id="delTempId">
+                                        <option>1</option>
+                                        <option>2</option>
+                                        <option>3</option>
+                                    </select>
+                                    <button class="btn btn-default remove-btn" id="removeTempUnit">Remove temperature unit</button>
+                                    <div class="separator"></div>
+                                    <label>Add temperature unit:</label>
+                                    <input type="text" placeholder="Temperature unit name"class="form-control" id="tempUnitDesc">
+                                    <button class="btn btn-default" id="addTempUnit">Add temperature unit</button>
                                 </div>
                             </div>
-                            <span type="button" class="glyphicon glyphicon-triangle-left"></span>
-                            <span type="button" class="glyphicon glyphicon-triangle-right"></span>
-                            <div class="progress">
-                                <div id="progress-temp-2" class="progress-bar progress-bar-danger progress-bar-striped" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%">
-                                    Heatelement 2
-                                </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <!-- Add device button, not implemented yet -->
+                <div class="col-sm-4">
+                    <div class="list-group">
+                        <button id="addRoom" type="button" class="list-group-item" data-toggle="modal" data-target="#myModal">
+                            <span class="glyphicon glyphicon-plus"></span>
+                            <h3 id="addText">Add device</h3>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Modal -->
+                <div id="myModal" class="modal fade" role="dialog">
+                    <div class="modal-dialog">
+
+                        <!-- Modal content-->
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                <h4 class="modal-title">Input information</h4>
                             </div>
-                            <span type="button" class="glyphicon glyphicon-triangle-left"></span>
-                            <span type="button" class="glyphicon glyphicon-triangle-right"></span>
-                            <div class="progress">
-                                <div id="progress-temp-3" class="progress-bar progress-bar-danger progress-bar-striped" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%">
-                                    Heatelement 3
-                                </div>
+                            <div class="modal-body">
+                                <form>
+                                    <div class="form-group">
+                                        <label for="deviceName">Device name:</label>
+                                        <input type="text" class="form-control" id="deviceName" placeholder="Enter name">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="deviceId">Device ID:</label>
+                                        <input type="text" class="form-control" id="deviceId" placeholder="Enter ID">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="exampleTextarea">Description(no function yet)</label>
+                                        <textarea class="form-control" id="exampleTextarea" rows="3"></textarea>
+                                    </div>
+                                </form>
                             </div>
-                            <div class="panel-bottom">
-                                <label for="">Remove temp unit:</label>
-                                <select class="form-control" id="">
-                                    <option>1</option>
-                                    <option>2</option>
-                                    <option>3</option>
-                                </select>
-                                <button id="" class="btn btn-default remove-btn">Remove temp unit</button>
-                                <div class="separator"></div>
-                                <label for="">Add temp unit:</label>
-                                <input type="text" placeholder="temp unit name"class="form-control" id="">
-                                <button id="" class="btn btn-default">Add temp unit</button>
+                            <div class="modal-footer">
+                                <button type="submit" id="submitDeviceData" class="btn btn-primary" data-dismiss="modal">Submit</button>
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
                             </div>
                         </div>
                     </div>
@@ -199,3 +181,5 @@
         </div>
     </body>
 </html>
+
+<!--     -->

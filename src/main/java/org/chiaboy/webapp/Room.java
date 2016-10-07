@@ -23,19 +23,19 @@ public class Room {
         this.id = id;
         this.name = name;
         sounds = new HashMap<String, SoundDevice>() {{
-            put("1", new SoundDevice("1", "generic desc", "10")); //Test-value
-            put("2", new SoundDevice("2", "generic desc", "20")); //Test-value
-            put("3", new SoundDevice("3", "generic desc", "30")); //Test-value
+            put("1", new SoundDevice("1", "TV", "10")); //Test-value
+            put("2", new SoundDevice("2", "Stereo", "20")); //Test-value
+            put("3", new SoundDevice("3", "Home theater", "30")); //Test-value
         }};
         lights = new HashMap<String, Light>() {{
-            put("1", new Light("1", "generic desc", true, 11)); //Test-value
-            put("2", new Light("2", "generic desc", true, 22)); //Test-value
-            put("3", new Light("3", "generic desc", true, 63)); //Test-value
+            put("1", new Light("1", "Lamp", true, 11)); //Test-value
+            put("2", new Light("2", "Nightlamp", true, 22)); //Test-value
+            put("3", new Light("3", "Celing", true, 63)); //Test-value
         }};
         temps = new HashMap<String, Temperature>() {{
-            put("1", new Temperature("1", "generic desc", 11)); //Test-value
-            put("2", new Temperature("2", "generic desc", 22)); //Test-value
-            put("3", new Temperature("3", "generic desc", 33)); //Test-value
+            put("1", new Temperature("1", "Floor", 11)); //Test-value
+            put("2", new Temperature("2", "Ambient", 22)); //Test-value
+            put("3", new Temperature("3", "Airflow", 33)); //Test-value
         }};
     }
 

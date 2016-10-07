@@ -29,6 +29,10 @@ public class Light {
         return desc;
     }
 
+    public void setDesc(String desc) {
+        this.desc = desc;
+    }
+
     public boolean getState(){
         return on;
     }

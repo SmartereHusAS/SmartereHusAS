@@ -25,6 +25,10 @@ public class SoundDevice {
         return desc;
     }
 
+    public void setDesc(String desc) {
+        this.desc = desc;
+    }
+
     public String getVolume() {
         return volume;
     }

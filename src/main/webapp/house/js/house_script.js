@@ -34,7 +34,7 @@ $(document).ready(function(){
                 container.append(
                         '<div class="col-sm-4">'+
                         '<div class="list-group">'+
-                        '<a href="/house/rooms/room.html?id=">'+
+                        '<a href="/house/rooms/room.html?'+ data[i].id+'" >'+
                         '<button type="button" class="list-group-item"><h3>'+data[i].name+'</h3></button>'+
                         '</a>'+
                         '<div class="panel panel-default">'+
@@ -59,7 +59,7 @@ $(document).ready(function(){
                         '</div>'+
                         '</div>'+
                         '</div>'
-                )
+                );
                 console.log(data[i].name);
                 console.log(data[i].id);
             }

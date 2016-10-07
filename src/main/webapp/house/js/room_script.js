@@ -2,23 +2,99 @@
 var rootURL = "http://localhost:8080/api/rooms/";
 
 $(document).ready(function(){
-    $("#progress-sound-1").ready(function() {
-        $.getJSON(rootURL + '1/sounds/1', function(result) {
+
+    $(document).ready(function(){
+        $.get(rootURL + findUrlId(),function(data) {
+            var container = $("#roomName");
+            var html = container.html("");
+            container.append(
+                '<h1>Smartere Hus AS</h1>'+
+                '<h2>'+data.name+'</h2>'
+            );
+        })
+    });
+
+    $(document).ready(function(){
+        $.get(rootURL + findUrlId(),function(data) {
+            var container = $(".progressSound");
+            var html = container.html("");
+            for(var i=0;i<data.sounds.length;i++) {
+                container.append(
+                     '<span type="button" class="glyphicon glyphicon-triangle-left"></span>'+
+                     '<span type="button" class="glyphicon glyphicon-triangle-right"></span>'+
+                     '<div  class="progress">'+
+                     '<div id="progress-sound-'+i+'" class="progress-bar progress-bar-warning progress-bar-striped" role="progressbar" aria-valuenow="'+data.sounds[i].volume+'" aria-valuemin="0" aria-valuemax="100" style="width: '+data.sounds[i].volume+'%">'+
+                     ''+data.sounds[i].desc+''+
+                     '</div>'+
+                     '</div>'
+                );
+            }
+        })
+    });
+
+    $(document).ready(function(){
+        $.get(rootURL + findUrlId(),function(data) {
+            var container = $(".progressLight");
+            var html = container.html("");
+            for(var i=0;i<data.lights.length;i++) {
+                container.append(
+                    '<span type="button" class="glyphicon glyphicon-triangle-left"></span>'+
+                    '<span type="button" class="glyphicon glyphicon-triangle-right"></span>'+
+                    '<div  class="progress">'+
+                    '<div id="progress-light-'+i+'" class="progress-bar progress-bar-warning progress-bar-striped" role="progressbar" aria-valuenow="'+data.lights[i].wattage+'" aria-valuemin="0" aria-valuemax="100" style="width: '+data.lights[i].wattage+'%">'+
+                    ''+data.lights[i].desc+''+
+                    '</div>'+
+                    '</div>'
+                );
+            }
+        })
+    });
+
+    $(document).ready(function(){
+        $.get(rootURL + findUrlId(),function(data) {
+            var container = $(".progressTemp");
+            var html = container.html("");
+            for(var i=0;i<data.temps.length;i++) {
+                container.append(
+                    '<span type="button" class="glyphicon glyphicon-triangle-left"></span>'+
+                    '<span type="button" class="glyphicon glyphicon-triangle-right"></span>'+
+                    '<div  class="progress">'+
+                    '<div id="progress-temp-'+i+'" class="progress-bar progress-bar-warning progress-bar-striped" role="progressbar" aria-valuenow="'+data.temps[i].temp+'" aria-valuemin="0" aria-valuemax="100" style="width: '+data.temps[i].temp+'%">'+
+                    ''+data.temps[i].desc+''+
+                    '</div>'+
+                    '</div>'
+                );
+            }
+        })
+    });
+
+
+
+    function findUrlId() {
+        var url = window.location.href;
+        var res = url.split("?");
+        return res[1];
+    }
+
+
+    //FIXME: change all under here with slider functions that updates on the fly with the server(?)
+    $("#progress-sound-0").ready(function() {
+        $.getJSON(rootURL + findUrlId() + '/sounds/1', function(result) {
             if(result != null) {
                 $("#progress-sound-1").attr("aria-valuenow", result.volume).css("width", (result.volume*2));
             }
         });
     });
 
-    $("#progress-sound-2").ready(function() {
-        $.getJSON(rootURL + '1/sounds/2', function(result) {
+    $("#progress-sound-1").ready(function() {
+        $.getJSON(rootURL + findUrlId() + '/sounds/2', function(result) {
             if(result != null) {
                 $("#progress-sound-2").attr("aria-valuenow", result.volume).css("width", (result.volume*2));
             }        });
     });
 
-    $("#progress-sound-3").ready(function() {
-        $.getJSON(rootURL + '1/sounds/3', function(result) {
+    $("#progress-sound-2").ready(function() {
+        $.getJSON(rootURL + findUrlId() + '/sounds/3', function(result) {
             if(result != null) {
                 $("#progress-sound-3").attr("aria-valuenow", result.volume).css("width", (result.volume*2));
             }        });
@@ -173,42 +249,106 @@ $(document).ready(function(){
         }
     });
 
-    //FIXME: finn romnr og sett det inn som parameter.
-    $("#addSoundDevice").click(function () {
-        addSoundDevice(1);
-        return false;
+    //FIXME: buggy when adding after you have deleted a unit. Probably something with id overwrite eachother.
+    $("#addSoundUnit").click(function () {
+        $.get(rootURL + findUrlId(),function(data) {
+            $.ajax({
+                type: 'POST',
+                contentType: 'application/json',
+                url: rootURL + findUrlId() + '/sounds',
+                dataType: "json",
+                data: JSON.stringify({
+                    id: (data.sounds.length + 1),
+                    volume: 50,
+                    desc: $("#soundUnitDesc").val(),
+                }),
+                success: function () {
+                    console.log('Unit added!');
+                    console.log("NEW ID WHEN ADDING: " + (data.sounds.length + 1));
+                    window.location.reload();
+                }
+            });
+
+        });
     });
 
-    function addSoundDevice(roomId) {
-        console.log('addSoundDevice');
+    $("#addLightUnit").click(function () {
+        $.get(rootURL + findUrlId(),function(data) {
+            $.ajax({
+                type: 'POST',
+                contentType: 'application/json',
+                url: rootURL + findUrlId() + '/lights',
+                dataType: "json",
+                data: JSON.stringify({
+                    id: (data.lights.length + 1),
+                    wattage: 50,
+                    desc: $("#lightUnitDesc").val(),
+                }),
+                success: function () {
+                    console.log('Unit added!');
+                    window.location.reload();
+                }
+            });
+        });
+    });
+
+    $("#addTempUnit").click(function () {
+        $.get(rootURL + findUrlId(),function(data) {
+            $.ajax({
+                type: 'POST',
+                contentType: 'application/json',
+                url: rootURL + findUrlId() + '/temps',
+                dataType: "json",
+                data: JSON.stringify({
+                    id: (data.temps.length + 1),
+                    temp: 50,
+                    desc: $("#tempUnitDesc").val(),
+                }),
+                success: function () {
+                    console.log('Unit added!');
+                    window.location.reload();
+                }
+            });
+        });
+    });
+
+
+    $("#removeSoundUnit").click(function () {
         $.ajax({
-            type: 'POST',
-            contentType: 'application/json',
-            url: rootURL + roomId + '/sounds',
-            dataType: "json",
-            data: JSON.stringify({
-                id: $("#newId").val(),
-                volume: $("#newVolume").val(),
-            }),
-            success: function(data, textStatus, jqXHR){
-                alert('Device added!');
+            url: rootURL + findUrlId() + '/sounds/' + $("#delSoundId").val(),
+            type: 'DELETE',
+            success: function() {
+                console.log("Unit deleted!");
                 window.location.reload();
             }
         });
-    }
+    });
 
-
-    $("#removeSoundDevice").click(function () {
+    $("#removeLightUnit").click(function () {
         $.ajax({
-            url: rootURL + '1/sounds/' + $("#deleteId").val(),
+            url: rootURL + findUrlId() + '/lights/' + $("#delLightId").val(),
             type: 'DELETE',
             success: function(result) {
-                console.log("Device deleted!");
+                console.log("Unit deleted!");
                 window.location.reload();
             }
         });
     });
 
+    $("#removeTempUnit").click(function () {
+        $.ajax({
+            url: rootURL + findUrlId() + '/temps/' + $("#delTempId").val(),
+            type: 'DELETE',
+            success: function(result) {
+                console.log("Unit deleted!");
+                window.location.reload();
+            }
+        });
+    });
+
+
+
+    //FIXME: they work, but do nothing but set background color to grey.
     $("#toggleSounds").click(function(){
         if($("#toggleSounds").is(':checked')) {
             $("#progress-sound-1").css("background-color", "#5cb85c");
